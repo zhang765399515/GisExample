@@ -1,0 +1,196 @@
+.dhy_common-layout {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: url("/image/application/geokeygis_bg.png") no-repeat 0 0/100% 100% fixed;
+}
+
+.dhy_common-layout .el-container {
+  height: calc(100vh - 60px);
+}
+
+.dhy_common-layout .el-container .el-aside {
+  height: 100%;
+  overflow: hidden;
+  width: 240px;
+}
+
+.dhy_common-layout .el-container .el-aside .demo-collapse {
+  height: 100%;
+  padding: 0;
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__header {
+  background-color: transparent;
+  color: #000;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__content {
+  color: #000;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__content > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__content > ul li {
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 0.55rem;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  list-style: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__content > ul li.is-selected {
+  color: #fff;
+  background-color: #3473f9;
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__content > ul li:hover {
+  color: #fff;
+  background-color: rgba(52, 115, 249, 0.5);
+}
+
+.dhy_common-layout .el-container .el-aside .el-collapse-item__wrap {
+  background-color: transparent;
+}
+
+.dhy_common-layout .el-container .el-header {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.dhy_common-layout .el-container .el-main {
+  overflow: hidden;
+  padding: 0;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_cases {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #ffffffe6;
+  padding: 10px;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_cases .el-scrollbar__wra {
+  overflow: hidden;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_cases .el-scrollbar__view {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main {
+  width: 100%;
+  padding: 5px 20px;
+  overflow: hidden;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  color: #51a6ee;
+  width: 100%;
+  margin: 0 5px;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-title span {
+  display: block;
+  width: auto;
+  text-align: left;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-title img {
+  height: 60%;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-title::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: auto;
+  background-color: #ccc;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container {
+  margin: 10px;
+  padding-bottom: 1rem;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container > span {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container .dhy_case-component {
+  display: grid;
+  grid-template-columns: repeat(5, 19%);
+  overflow-x: hidden;
+  padding: 10px;
+  gap: 1.25rem;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container .dhy_case-component .dhy_case-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  height: 100%;
+  width: 95%;
+  max-height: 280px;
+  background-color: #e9f0fb;
+  border-radius: 6px;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container .dhy_case-component .dhy_case-card img {
+  width: 100%;
+  height: calc(100% - 3rem);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container .dhy_case-component .dhy_case-card .dhy_card-label {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  height: 3rem;
+  margin: 0 10px;
+}
+
+.dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container .dhy_case-component .dhy_case-card:hover::after, .dhy_common-layout .el-container .el-main .dhy_case-main .dhy_case-container .dhy_case-component .dhy_case-card:focus::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 1px solid #5d90fd;
+  border-radius: 6px;
+}

@@ -1,0 +1,199 @@
+.dhy_common-layout {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  // text-align: center;
+  background: url('/image/application/geokeygis_bg.png') no-repeat 0 0 / 100% 100% fixed;
+
+  .el-container {
+    height: calc(100vh - 60px);
+    .el-aside {
+      height: calc(100vh - vw(60));
+      overflow: hidden;
+      width: vw(240);
+
+      .demo-collapse {
+        height: 100%;
+        padding: 0;
+      }
+
+      .el-collapse-item__header {
+        background-color: transparent;
+        color: #000;
+        padding-left: vw(20);
+        font-size: vw(16);
+        font-weight: 400;
+      }
+
+      .el-collapse-item__content {
+        color: #000;
+        padding-bottom: vw(10);
+        font-size: vw(14);
+
+        > ul {
+          margin: 0;
+          padding: 0;
+
+          li {
+            margin: vw(5) vw(10);
+            padding: vw(5) vw(10);
+            border-radius: 0.55rem;
+            font-size: vw(16);
+            height: vw(30);
+            line-height: vw(30);
+            list-style: none;
+            text-align: left;
+            cursor: pointer;
+
+            &.is-selected {
+              color: #fff;
+              background-color: rgb(52, 115, 249);
+            }
+
+            &:hover {
+              color: #fff;
+              background-color: rgba(52, 115, 249, 0.5);
+            }
+          }
+        }
+      }
+
+      .el-collapse-item__wrap {
+        background-color: transparent;
+      }
+    }
+
+    .el-header {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .el-main {
+      overflow: hidden;
+      padding: 0;
+
+      .dhy_cases {
+        width: calc(100% - vw(20));
+        height: calc(100% - vw(20));
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 1rem;
+        background-color: #ffffffe6;
+        padding: vw(10);
+
+        .el-scrollbar__wra {
+          overflow: hidden;
+        }
+
+        .el-scrollbar__view {
+          display: flex;
+          flex-wrap: wrap;
+          border-radius: vw(8);
+        }
+      }
+
+      .dhy_case-main {
+        width: 100%;
+        padding: vw(5) vw(20);
+        overflow: hidden;
+
+        .dhy_case-title {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: vw(20);
+          font-size: vw(20);
+          color: #51a6ee;
+          width: 100%;
+          margin: 0 vw(5);
+
+          span {
+            display: block;
+            width: auto;
+            text-align: left;
+          }
+
+          img{
+            height: 60%;
+          }
+        }
+
+        .dhy_case-title::after {
+          content: '';
+          display: block;
+          height: 1px;
+          width: auto;
+          background-color: #ccc;
+        }
+
+        .dhy_case-container {
+          margin: vh(10);
+          padding-bottom: 1rem;
+
+          > span {
+            display: block;
+            font-size: vw(18);
+            font-weight: 500;
+            text-align: left;
+            margin: vw(20) 0;
+          }
+
+          .dhy_case-component {
+            display: grid;
+            grid-template-columns: repeat(5, 19%);
+            overflow-x: hidden;
+            padding: vh(10);
+            gap: 1.25rem;
+
+            .dhy_case-card {
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              flex-wrap: wrap;
+              position: relative;
+              height: vw(240);
+              width: 95%;
+              max-height: vw(280);
+              background-color: #e9f0fb;
+              border-radius: vw(6);
+              padding: 0.625rem;
+              box-sizing: border-box;
+              cursor: pointer;
+
+              .image {
+                width: 100%;
+                height: calc(100% - 3rem);
+                border-radius: vw(6);
+                z-index: 1;
+              }
+
+              .dhy_card-label {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                width: 100%;
+                height: 3rem;
+                margin: 0 vw(10);
+              }
+
+              &:hover,
+              &:focus {
+                &::after {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  content: '';
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid rgb(93, 144, 253);
+                  border-radius: vh(6)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

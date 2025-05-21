@@ -1,0 +1,1003 @@
+[
+  {
+    "name": "SceneView",
+    "functionDescription": "初始化地图",
+    "parameter": [
+      {
+        "a": "container",
+        "type": "Element | String",
+        "parameterDescription": "初始化地图的DOM元素或者ID"
+      },
+      {
+        "a": "animation",
+        "type": "Boolean",
+        "parameterDescription": "视图动画播放速度控件"
+      },
+      {
+        "a": "baseLayerPicker",
+        "type": "Boolean",
+        "parameterDescription": "地图切换控件(底图以及地形图)是否显示"
+      },
+      {
+        "a": "fullscreenButton",
+        "type": "Boolean",
+        "parameterDescription": "全屏按钮"
+      },
+      { "a": "geocoder", "type": null, "parameterDescription": "地理编码" },
+      {
+        "a": "homeButton",
+        "type": "Boolean",
+        "parameterDescription": "主页按钮"
+      },
+      {
+        "a": "infoBox",
+        "type": "Boolean",
+        "parameterDescription": "点击要素之后显示的信息框"
+      },
+      {
+        "a": "measurement",
+        "type": "Boolean",
+        "parameterDescription": "测量工具栏"
+      },
+      {
+        "a": "transparent",
+        "type": "Boolean",
+        "parameterDescription": "地图透明工具"
+      },
+      { "a": "zoomButton", "type": "Boolean", "parameterDescription": null },
+      {
+        "a": "sceneModePicker",
+        "type": null,
+        "parameterDescription": "2D,3D和Columbus View切换控件"
+      },
+      {
+        "a": "selectionIndicator",
+        "type": "Boolean",
+        "parameterDescription": "选中元素显示"
+      },
+      { "a": "timeline", "type": "Boolean", "parameterDescription": "时间线" },
+      { "a": "locationBar", "type": "Boolean", "parameterDescription": null },
+      {
+        "a": "navigationHelpButton",
+        "type": "Boolean",
+        "parameterDescription": "帮助提示控件"
+      },
+      {
+        "a": "navigationInstructionsInitiallyVisible",
+        "type": "Boolean",
+        "parameterDescription": "导航是否最初可见"
+      },
+      {
+        "a": "showRenderLoopErrors",
+        "type": "Boolean",
+        "parameterDescription": "显示渲染循环错误"
+      },
+      {
+        "a": "maximumRenderTimeChange",
+        "type": "Number",
+        "parameterDescription": "最大渲染时间更改"
+      },
+      {
+        "a": "scene3DOnly",
+        "type": "Boolean",
+        "parameterDescription": "仅3D渲染，节省GPU内存"
+      },
+      {
+        "a": "sceneMode",
+        "type": "SceneMode",
+        "parameterDescription": "初始场景模式"
+      },
+      {
+        "a": "baseMap",
+        "type": "baseMap",
+        "parameterDescription": "默认加载的影像图，不传为天地图影像"
+      },
+      {
+        "a": "imageryProvider",
+        "type": "imageryProvider",
+        "parameterDescription": "设置默认加载的影像图"
+      },
+      {
+        "a": "requestRenderMode",
+        "type": "Boolean",
+        "parameterDescription": "请求渲染模式，启用会减少应用程序的CPU/GPU使用率"
+      },
+      {
+        "a": "fullscreenElement",
+        "type": "Element | String",
+        "parameterDescription": "当按下全屏按钮时，要置于全屏模式的元素或id。"
+      }
+    ]
+  },
+  {
+    "name": "geoWMTSLayer",
+    "functionDescription": "加载WMTS协议的图层",
+    "parameter": [
+      { "a": "id", "type": "String", "parameterDescription": "图层标识" },
+      { "a": "url", "type": "String", "parameterDescription": "图层路径" },
+      { "a": "title", "type": "String", "parameterDescription": "图层名称" },
+      {
+        "a": "format",
+        "type": "String",
+        "parameterDescription": "图层形式  如：tiles、image/jpeg"
+      },
+      {
+        "a": "tileMatrixSet",
+        "type": "String",
+        "parameterDescription": "设置瓦片id"
+      },
+      { "a": "style", "type": "default", "parameterDescription": "图层样式" }
+    ]
+  },
+  {
+    "name": "EventDriven",
+    "functionDescription": "生成场景中的事件驱动",
+    "parameter": [{ "a": "viewer", "type": "viewer", "parameterDescription": "视图" }]
+  },
+  {
+    "name": "EasingFunction",
+    "functionDescription": "用于实现飞行、漫游等功能",
+    "parameter": [{ "a": "EasingFunction", "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "WebMapServiceImageryProvider",
+    "functionDescription": "用于加载SHP和TIF影像",
+    "parameter": [
+      { "a": "url", "type": "String", "parameterDescription": "路径" },
+      {
+        "a": "tilingScheme",
+        "type": null,
+        "parameterDescription": "平铺方式（GeographicTilingScheme ||  WebMercatorTilingScheme）"
+      },
+      {
+        "a": "enablePickFeatures",
+        "type": "Boolean",
+        "parameterDescription": "是否启用特征拾取"
+      }
+    ]
+  },
+  {
+    "name": "GeographicTilingScheme",
+    "functionDescription": "一种几何体的平铺方案，参考简单的地理投影，其中经度和纬度直接映射到X和Y。这种投影通常被称为地理投影、等角投影、等距圆柱投影或板角投影。",
+    "parameter": [
+      {
+        "a": "ellipsoid",
+        "type": "Ellipsoid",
+        "parameterDescription": "表面被平铺的椭球体。默认为WGS84椭球体"
+      },
+      {
+        "a": "rectangle",
+        "type": "Rectangle",
+        "parameterDescription": "平铺方案覆盖的矩形，单位为弧度"
+      },
+      {
+        "a": "numberOfLevelZeroTilesX",
+        "type": "Number",
+        "parameterDescription": "平铺树零级X方向上的平铺数2"
+      },
+      {
+        "a": "numberOfLevelZeroTilesY",
+        "type": "Number",
+        "parameterDescription": "平铺树零级Y方向上的平铺数1"
+      }
+    ]
+  },
+  {
+    "name": "WebMercatorTilingScheme",
+    "functionDescription": "参考WebMercatorProjection的几何体平铺方案，EPSG:3857。这是谷歌地图、微软Bing地图和大多数ESRI ArcGIS Online使用的平铺方案。",
+    "parameter": [
+      {
+        "a": "ellipsoid",
+        "type": "Ellipsoid",
+        "parameterDescription": "可选其表面正在被贴平的椭球。默认值为 WGS84 椭球。"
+      },
+      {
+        "a": "numberOfLevelZeroTilesX",
+        "type": "Number",
+        "parameterDescription": "可选地在瓦树的零级处，X方向上的瓦数。"
+      },
+      {
+        "a": "numberOfLevelZeroTilesY",
+        "type": "Number",
+        "parameterDescription": "可选地在瓦树的零点处，在Y方向上的瓦数。"
+      },
+      {
+        "a": "rectangleSouthwestInMeters",
+        "type": "Cartesian2",
+        "parameterDescription": "矩形的西南角，以米为单位。如果未指定此参数或rectangleNortheastinMeters，则整个地球将在经度方向上被覆盖，并在纬度方向上以相等的距离被覆盖，从而产生正方形投影"
+      },
+      {
+        "a": "rectangleNortheastInMeters",
+        "type": "Cartesian2",
+        "parameterDescription": "可选瓷砖方案覆盖的矩形的东北角，以米为单位。如果未指定此参数或rectanglesouthwestinMes，则整个gobe 在经度方向上被覆盖，在纬度方向上被等距离覆盖，从而产生正方形投影"
+      }
+    ]
+  },
+  {
+    "name": "Resource",
+    "functionDescription": "请求，包括位置和检索或创建派生资源所需的任何其他参数。它还提供重试请求的能力。",
+    "parameter": [
+      {
+        "a": "options",
+        "type": "string | Resource.ConstructorOptions",
+        "parameterDescription": "描述初始化选项的url或对象"
+      }
+    ]
+  },
+  {
+    "name": "Rectangle",
+    "functionDescription": "指定为经度和纬度坐标的二维区域。",
+    "parameter": [
+      {
+        "a": "west",
+        "type": "number",
+        "parameterDescription": "最西端的经度，以弧度为单位，在[-Pi，Pi]范围内。"
+      },
+      {
+        "a": "south",
+        "type": "number",
+        "parameterDescription": "最南端的纬度，以弧度为单位，在[-Pi/2，Pi/2]范围内。"
+      },
+      {
+        "a": "east",
+        "type": "number",
+        "parameterDescription": "最东经，以弧度为单位，范围为[-Pi，Pi]。"
+      },
+      {
+        "a": "north",
+        "type": "number",
+        "parameterDescription": "最北的纬度，以弧度为单位，范围为[-Pi/2，Pi/2]。"
+      }
+    ]
+  },
+  {
+    "name": "GeokeyTerrainProvider",
+    "functionDescription": "用于加载地形数据（ter高程、tif转的terrain）",
+    "parameter": [{ "a": "url", "type": "String", "parameterDescription": "地址" }]
+  },
+  {
+    "name": "GeoElevationLayer",
+    "functionDescription": null,
+    "parameter": []
+  },
+  {
+    "name": "Cartesian3",
+    "functionDescription": "三维笛卡尔点",
+    "parameter": [
+      { "a": "x", "type": "number", "parameterDescription": "x坐标" },
+      { "a": "y", "type": "number", "parameterDescription": "y坐标" },
+      { "a": "z", "type": "number", "parameterDescription": "z高程" }
+    ]
+  },
+  {
+    "name": "Geokey3DTileset",
+    "functionDescription": "加载3DTileset格式数据",
+    "parameter": [
+      { "a": "url", "type": "String", "parameterDescription": "地址" },
+      {
+        "a": "loadSiblings",
+        "type": "Boolean",
+        "parameterDescription": "如果为true则不会在已加载完概况房屋后，自动从中心开始超清化房屋"
+      },
+      {
+        "a": "cullRequestsWhileMovingMultiplier",
+        "type": "number",
+        "parameterDescription": "值越小能够更快的剔除"
+      },
+      {
+        "a": "dynamicScreenSpaceError",
+        "type": "Boolean",
+        "parameterDescription": null
+      },
+      {
+        "a": "dynamicScreenSpaceErrorDensity",
+        "type": "number",
+        "parameterDescription": null
+      },
+      {
+        "a": "dynamicScreenSpaceErrorFactor",
+        "type": "number",
+        "parameterDescription": null
+      },
+      {
+        "a": "dynamicScreenSpaceErrorHeightFalloff",
+        "type": "number",
+        "parameterDescription": null
+      },
+      {
+        "a": "progressiveResolutionHeightFraction",
+        "type": "number",
+        "parameterDescription": "数值偏于0能够让初始加载变得模糊"
+      },
+      {
+        "a": "dynamicScreenSpaceErrorDensity",
+        "type": "number",
+        "parameterDescription": "数值加大，能让周边加载变快"
+      },
+      {
+        "a": "maximumScreenSpaceError",
+        "type": "number",
+        "parameterDescription": "模糊程度，数值加大，最终成像越模糊"
+      }
+    ]
+  },
+  {
+    "name": "Geokey3DTileStyle",
+    "functionDescription": "修改3DTileset的样式",
+    "parameter": [
+      { "a": "show", "type": "Boolean", "parameterDescription": "显示与否" },
+      { "a": "color", "type": "RGBA", "parameterDescription": "颜色控制" },
+      { "a": "pointSize", "type": null, "parameterDescription": null },
+      { "a": "pointOutlineColor", "type": null, "parameterDescription": null },
+      { "a": "pointOutlineWidth", "type": null, "parameterDescription": null },
+      { "a": "labelColor", "type": null, "parameterDescription": null },
+      { "a": "labelOutlineColor", "type": null, "parameterDescription": null },
+      { "a": "labelOutlineWidth", "type": null, "parameterDescription": null },
+      { "a": "labelStyle", "type": null, "parameterDescription": null },
+      { "a": "font", "type": null, "parameterDescription": null },
+      { "a": "labelText", "type": null, "parameterDescription": null },
+      { "a": "backgroundColor", "type": null, "parameterDescription": null },
+      { "a": "backgroundPadding", "type": null, "parameterDescription": null },
+      { "a": "backgroundEnabled", "type": null, "parameterDescription": null },
+      { "a": "scaleByDistance", "type": null, "parameterDescription": null },
+      {
+        "a": "translucencyByDistance",
+        "type": null,
+        "parameterDescription": null
+      },
+      {
+        "a": "distanceDisplayCondition",
+        "type": null,
+        "parameterDescription": null
+      },
+      { "a": "heightOffset", "type": null, "parameterDescription": null },
+      { "a": "anchorLineEnabled", "type": null, "parameterDescription": null },
+      { "a": "anchorLineColor", "type": null, "parameterDescription": null },
+      { "a": "image", "type": null, "parameterDescription": null },
+      {
+        "a": "disableDepthTestDistance",
+        "type": null,
+        "parameterDescription": null
+      },
+      { "a": "horizontalOrigin", "type": null, "parameterDescription": null },
+      { "a": "verticalOrigin", "type": null, "parameterDescription": null },
+      {
+        "a": "labelHorizontalOrigin",
+        "type": null,
+        "parameterDescription": null
+      },
+      { "a": "labelVerticalOrigin", "type": null, "parameterDescription": null }
+    ]
+  },
+  {
+    "name": "UrlTemplateImageryProvider",
+    "functionDescription": "通过使用指定的 URL 模板请求图块来提供图像。通常用来加载png或者jpg的图像",
+    "parameter": [
+      { "a": "url", "type": "String", "parameterDescription": "服务地址" },
+      {
+        "a": "pickFeaturesUrl",
+        "type": "String",
+        "parameterDescription": "选定属性的url"
+      },
+      {
+        "a": "urlSchemeZeroPadding",
+        "type": "Object",
+        "parameterDescription": "获取每个平铺坐标的填充宽度"
+      },
+      {
+        "a": "subdomains",
+        "type": "String | Array",
+        "parameterDescription": "用于 URL 模板中 {s} 占位符的子域"
+      },
+      {
+        "a": "credit",
+        "type": "String",
+        "parameterDescription": "是否在屏幕上显示某些内容的归属/信用有关的数据"
+      },
+      {
+        "a": "minimumLevel",
+        "type": "Number",
+        "parameterDescription": "支持的最小细节级别"
+      },
+      {
+        "a": "maximumLevel",
+        "type": "Number",
+        "parameterDescription": "支持的最大细节级别"
+      },
+      {
+        "a": "rectangle",
+        "type": "Object",
+        "parameterDescription": "图像覆盖的矩形，以弧度表示"
+      },
+      {
+        "a": "tilingScheme",
+        "type": null,
+        "parameterDescription": "椭圆体表面上的几何图形或图像的平铺方案"
+      },
+      { "a": "ellipsoid", "type": null, "parameterDescription": "椭球体" },
+      {
+        "a": "tileWidth",
+        "type": "Number",
+        "parameterDescription": "图像图块的像素宽度"
+      },
+      {
+        "a": "tileHeight",
+        "type": "Number",
+        "parameterDescription": "图像图块的像素高度"
+      },
+      {
+        "a": "hasAlphaChannel",
+        "type": "Boolean",
+        "parameterDescription": "如果此图像提供的图像包含 alpha ，则为 true，否则为false"
+      },
+      {
+        "a": "getFeatureInfoFormats",
+        "type": "Array",
+        "parameterDescription": "调用 UrlTemplateImageryProvider#pickFeatures 时在特定位置获取特征信息的格式。如果未指定此参数，则禁用特征拾取"
+      },
+      {
+        "a": "enablePickFeatures",
+        "type": "Boolean",
+        "parameterDescription": "如果为 true， UrlTemplateImageryProvider#pickFeatures 将请求 pickFeaturesUrl 并尝试解释响应中包含的功能，如果为 false，将立即返回 undefined"
+      },
+      {
+        "a": "customTags",
+        "type": "Object",
+        "parameterDescription": "允许替换 URL 模板中的自定义关键字。对象必须有字符串作为键和函数作为值。"
+      }
+    ]
+  },
+  {
+    "name": "createTileMapServiceImageryProvider",
+    "functionDescription": "基于UrlTemplateImageryProvider的封装",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "WebMapTileServiceImageryProvider",
+    "functionDescription": "加载WMTS数据",
+    "parameter": [
+      { "a": "url", "type": null, "parameterDescription": "服务url地址" },
+      {
+        "a": "format",
+        "type": "String",
+        "parameterDescription": "图像类型（'image/jpeg'）"
+      },
+      {
+        "a": "layer",
+        "type": "String",
+        "parameterDescription": "WMTS 请求的图层名称"
+      },
+      {
+        "a": "style",
+        "type": "String",
+        "parameterDescription": "WMTS 请求的样式名称"
+      },
+      {
+        "a": "tileMatrixSetID",
+        "type": "String",
+        "parameterDescription": "用于 WMTS 请求的 TileMatrixSet 的标识符"
+      },
+      {
+        "a": "tileMatrixLabels",
+        "type": "Array",
+        "parameterDescription": "TileMatrix 中用于 WMTS 请求的标识符列表"
+      },
+      {
+        "a": "clock",
+        "type": null,
+        "parameterDescription": "在确定时间维度的值时使用的 Clock 实例"
+      },
+      {
+        "a": "times",
+        "type": null,
+        "parameterDescription": "TimeIntervalCollection 及其 data 属性是一个包含时间动态维度及其值的对象"
+      },
+      {
+        "a": "dimensions",
+        "type": "Object",
+        "parameterDescription": "包含静态尺寸及其值的对象"
+      },
+      {
+        "a": "tileWidth",
+        "type": "Number",
+        "parameterDescription": "平铺宽度，以像素为单位（默认：256）"
+      },
+      {
+        "a": "tileHeight",
+        "type": "Number",
+        "parameterDescription": "平铺高度，以像素为单位（默认：256）"
+      },
+      {
+        "a": "tilingScheme",
+        "type": null,
+        "parameterDescription": "对应于 TileMatrixSet 中的瓦片组织的瓦片方案"
+      },
+      {
+        "a": "rectangle",
+        "type": null,
+        "parameterDescription": "被图层覆盖的矩形"
+      },
+      {
+        "a": "minimumLevel",
+        "type": "Number",
+        "parameterDescription": "最小级别"
+      },
+      {
+        "a": "maximumLevel",
+        "type": "Number",
+        "parameterDescription": "最大级别"
+      },
+      {
+        "a": "ellipsoid",
+        "type": "Ellipsoid",
+        "parameterDescription": "椭球体"
+      },
+      {
+        "a": "credit",
+        "type": "Credit | String",
+        "parameterDescription": "在屏幕上显示某些内容的归属/信用有关的数据"
+      },
+      {
+        "a": "subdomains",
+        "type": "String | Array",
+        "parameterDescription": "用于 URL 模板中 {s} 占位符的子域"
+      }
+    ]
+  },
+  {
+    "name": "ArcGisMapServerImageryProvider",
+    "functionDescription": "ArcGIS MapServer切片图像",
+    "parameter": [
+      {
+        "a": "url",
+        "type": "Resource | String",
+        "parameterDescription": "ArcGIS MapServer 服务的 URL"
+      },
+      {
+        "a": "token",
+        "type": "String",
+        "parameterDescription": "用于对 ArcGIS MapServer 服务进行身份验证的 ArcGIS 令牌"
+      },
+      {
+        "a": "tileDiscardPolicy",
+        "type": "TileDiscardPolicy",
+        "parameterDescription": "确定图块是否无效"
+      },
+      {
+        "a": "usePreCachedTilesIfAvailable",
+        "type": "Boolean",
+        "parameterDescription": "如果为 true，则使用服务器的预缓存切片,如果为 false，则忽略任何预缓存的切片并使用'导出'服务"
+      },
+      {
+        "a": "layers",
+        "type": "String",
+        "parameterDescription": "要显示的层的逗号分隔列表，如果应显示所有层，则未定义"
+      },
+      {
+        "a": "enablePickFeatures",
+        "type": "Boolean",
+        "parameterDescription": "如果为 true， ArcGisMapServerImageryProvider#pickFeatures 将调用 MapServer 上的识别服务并返回响应中包含的要素，否则返回undefined"
+      },
+      {
+        "a": "rectangle",
+        "type": "Rectangle",
+        "parameterDescription": "图层的矩形"
+      },
+      {
+        "a": "tilingScheme",
+        "type": "TilingScheme",
+        "parameterDescription": "用于将世界划分为瓦片的瓦片方案"
+      },
+      {
+        "a": "ellipsoid",
+        "type": "Ellipsoid",
+        "parameterDescription": "椭球体"
+      },
+      {
+        "a": "tileWidth",
+        "type": "Number",
+        "parameterDescription": "每个图块的宽度，以像素为单位（默认：256）"
+      },
+      {
+        "a": "tileHeight",
+        "type": "Number",
+        "parameterDescription": "每个图块的高度，以像素为单位（默认：256）"
+      },
+      {
+        "a": "maximumLevel",
+        "type": "Number",
+        "parameterDescription": "请求的最大级别"
+      }
+    ]
+  },
+  {
+    "name": "ScreenSpaceEventHandler",
+    "functionDescription": "输入事件",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "Ellipsoid",
+    "functionDescription": null,
+    "parameter": [{ "a": null, "type": null, "parameterDescription": "椭球体" }]
+  },
+  {
+    "name": "Math",
+    "functionDescription": null,
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "ScreenSpaceEventType",
+    "functionDescription": "鼠标事件分类",
+    "parameter": [
+      {
+        "a": "LEFT_DOWN",
+        "type": "Number",
+        "parameterDescription": "鼠标左键按下事件"
+      },
+      {
+        "a": "LEFT_UP",
+        "type": "Number",
+        "parameterDescription": "鼠标左键向上事件"
+      },
+      {
+        "a": "LEFT_CLICK",
+        "type": "Number",
+        "parameterDescription": "鼠标左键单击事件"
+      },
+      {
+        "a": "LEFT_DOUBLE_CLICK",
+        "type": "Number",
+        "parameterDescription": "鼠标左键双击事件"
+      },
+      {
+        "a": "RIGHT_DOWN",
+        "type": "Number",
+        "parameterDescription": "鼠标左键按下事件"
+      },
+      {
+        "a": "RIGHT_UP",
+        "type": "Number",
+        "parameterDescription": "鼠标右键向上事件"
+      },
+      {
+        "a": "RIGHT_CLICK",
+        "type": "Number",
+        "parameterDescription": "鼠标右键单击事件"
+      },
+      {
+        "a": "MIDDLE_DOWN",
+        "type": "Number",
+        "parameterDescription": "鼠标中键按下事件"
+      },
+      {
+        "a": "MIDDLE_UP",
+        "type": "Number",
+        "parameterDescription": "鼠标中键向上事件"
+      },
+      {
+        "a": "MIDDLE_CLICK",
+        "type": "Number",
+        "parameterDescription": "鼠标中键单击事​​件"
+      },
+      {
+        "a": "MOUSE_MOVE",
+        "type": "Number",
+        "parameterDescription": "鼠标移动事件"
+      },
+      {
+        "a": "WHEEL",
+        "type": "Number",
+        "parameterDescription": "鼠标滚轮事件"
+      },
+      {
+        "a": "PINCH_START",
+        "type": "Number",
+        "parameterDescription": "触摸表面上两指事件的开始"
+      },
+      {
+        "a": "PINCH_END",
+        "type": "Number",
+        "parameterDescription": "触摸表面上的两指事件的结束"
+      },
+      {
+        "a": "PINCH_MOVE",
+        "type": "Number",
+        "parameterDescription": "触摸表面上两指事件的变化"
+      }
+    ]
+  },
+  {
+    "name": "MeasureTools",
+    "functionDescription": "面积、角度、高度、距离测量的工具库",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "GeometryInstance",
+    "functionDescription": "几何体实例化",
+    "parameter": [
+      { "a": "geometry", "type": null, "parameterDescription": "几何图形" },
+      {
+        "a": "modelMatrix",
+        "type": null,
+        "parameterDescription": "世界坐标的模型矩阵"
+      },
+      { "a": "id", "type": null, "parameterDescription": "id" },
+      { "a": "attributes", "type": null, "parameterDescription": "几何属性" }
+    ]
+  },
+  {
+    "name": "GroundPolylineGeometry",
+    "functionDescription": "线",
+    "parameter": [
+      {
+        "a": "positions",
+        "type": null,
+        "parameterDescription": "折线的点坐标"
+      },
+      { "a": "width", "type": null, "parameterDescription": "线宽（默认：1）" },
+      {
+        "a": "granularity",
+        "type": null,
+        "parameterDescription": "用于插值 options.points 的距离间隔"
+      },
+      {
+        "a": "loop",
+        "type": null,
+        "parameterDescription": "在几何创建期间是否将在最后一条线位置和第一条线位置之间添加一条线段，以使此折线成为一个循环"
+      },
+      { "a": "arcType", "type": null, "parameterDescription": "折线类型" }
+    ]
+  },
+  {
+    "name": "Color",
+    "functionDescription": "颜色类",
+    "parameter": [
+      { "a": "red", "type": "Number", "parameterDescription": "红色值" },
+      { "a": "green", "type": "Number", "parameterDescription": "绿色值" },
+      { "a": "blue", "type": "Number", "parameterDescription": "蓝色值" },
+      { "a": "alpha", "type": "Number", "parameterDescription": "透明值" }
+    ]
+  },
+  {
+    "name": "ColorGeometryInstanceAttribute",
+    "functionDescription": "几何颜色",
+    "parameter": [
+      { "a": "red", "type": "Number", "parameterDescription": "红色值" },
+      { "a": "green", "type": "Number", "parameterDescription": "绿色值" },
+      { "a": "blue", "type": "Number", "parameterDescription": "蓝色值" },
+      { "a": "alpha", "type": "Number", "parameterDescription": "透明值" }
+    ]
+  },
+  {
+    "name": "Camera",
+    "functionDescription": "相机",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "GroundPolylinePrimitive",
+    "functionDescription": "折线",
+    "parameter": [
+      {
+        "a": "geometryInstances",
+        "type": "Array | GeometryInstance",
+        "parameterDescription": "几何数据"
+      },
+      {
+        "a": "appearance",
+        "type": "Appearance",
+        "parameterDescription": "渲染折线的外观"
+      },
+      { "a": "show", "type": "Boolean", "parameterDescription": "是否显示" },
+      {
+        "a": "interleave",
+        "type": "Boolean",
+        "parameterDescription": "默认：false，当 true 时，几何顶点属性是交错的，这可以稍微提高渲染性能但增加加载时间"
+      },
+      {
+        "a": "releaseGeometryInstances",
+        "type": "Boolean",
+        "parameterDescription": "默认：true，基元不保留对输入 geometryInstances 的引用以节省内存"
+      },
+      {
+        "a": "allowPicking",
+        "type": "Boolean",
+        "parameterDescription": "默认：true，当 true 时，每个几何实例只能通过 Scene#pick 来选择。当为 false 时，GPU 内存被保存"
+      },
+      {
+        "a": "asynchronous",
+        "type": "Boolean",
+        "parameterDescription": "默认：true，确定是异步创建基元还是阻塞直到准备就绪"
+      },
+      {
+        "a": "classificationType",
+        "type": "ClassificationType",
+        "parameterDescription": "决定是否对地形、 3D Tiles 或两者进行分类"
+      },
+      {
+        "a": "debugShowBoundingVolume",
+        "type": "Boolean",
+        "parameterDescription": "默认：false，仅用于调试，确定是否显示此图元的命令的边界球体"
+      },
+      {
+        "a": "debugShowShadowVolume",
+        "type": "Boolean",
+        "parameterDescription": "默认：false，仅用于调试。确定是否绘制图元中每个几何体的阴影体积。必须在创建时为 true 才能生效"
+      }
+    ]
+  },
+  {
+    "name": "PolylineMaterialAppearance",
+    "functionDescription": "材质着色",
+    "parameter": [
+      {
+        "a": "translucent",
+        "type": "Boolean",
+        "parameterDescription": "默认：true，当 true 时，几何体应该是半透明的"
+      },
+      {
+        "a": "material",
+        "type": null,
+        "parameterDescription": "确定片段颜色的材质"
+      },
+      {
+        "a": "vertexShaderSource",
+        "type": null,
+        "parameterDescription": "可选的 GLSL 顶点着色器源，用于覆盖默认顶点着色器"
+      },
+      {
+        "a": "fragmentShaderSource",
+        "type": null,
+        "parameterDescription": "可选的 GLSL 片段着色器源，用于覆盖默认片段着色器"
+      },
+      {
+        "a": "renderState",
+        "type": null,
+        "parameterDescription": "可选的渲染状态，用于覆盖默认渲染状态"
+      }
+    ]
+  },
+  {
+    "name": "Material",
+    "functionDescription": "材质",
+    "parameter": [
+      {
+        "a": "Color",
+        "type": null,
+        "parameterDescription": "颜色：rgba 颜色对象"
+      },
+      {
+        "a": "Image",
+        "type": null,
+        "parameterDescription": "图片：image :图像的路径；repeat :具有 x 和 y 值的对象，指定重复图像的次数。"
+      },
+      {
+        "a": "DiffuseMap",
+        "type": null,
+        "parameterDescription": "漫反射贴图：image :图像的路径；channels :三个字符串，包含 r、g、b 和 a 的任意组合，用于选择所需的图像通道；repeat :具有 x 和 y 值的对象，指定重复图像的次数。"
+      },
+      {
+        "a": "AlphaMap",
+        "type": null,
+        "parameterDescription": "透明贴图：image :图像的路径；channel : 一个包含 r、g、b 或 a 的字符串，用于选择所需的图像通道；repeat :具有 x 和 y 值的对象，指定重复图像的次数。"
+      },
+      { "a": "SpecularMap", "type": null, "parameterDescription": null },
+      { "a": "EmissionMap", "type": null, "parameterDescription": null },
+      { "a": "BumpMap", "type": null, "parameterDescription": null },
+      { "a": "NormalMap", "type": null, "parameterDescription": null },
+      { "a": "Grid", "type": null, "parameterDescription": null },
+      { "a": "Stripe", "type": null, "parameterDescription": null },
+      { "a": "Checkerboard", "type": null, "parameterDescription": null },
+      { "a": "Dot", "type": null, "parameterDescription": null },
+      { "a": "Water", "type": null, "parameterDescription": null },
+      { "a": "RimLighting", "type": null, "parameterDescription": null },
+      { "a": "Fade", "type": null, "parameterDescription": null },
+      { "a": "PolylineArrow", "type": null, "parameterDescription": null },
+      { "a": "PolylineDash", "type": null, "parameterDescription": null },
+      { "a": "PolylineGlow", "type": null, "parameterDescription": null },
+      { "a": "PolylineOutline", "type": null, "parameterDescription": null },
+      { "a": "ElevationContour", "type": null, "parameterDescription": null },
+      { "a": "ElevationRamp", "type": null, "parameterDescription": null },
+      { "a": "SlopeRamp", "type": null, "parameterDescription": null },
+      { "a": "AspectRamp", "type": null, "parameterDescription": null }
+    ]
+  },
+  {
+    "name": "proj4",
+    "functionDescription": "坐标转换的第三方工具类",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "createGuid",
+    "functionDescription": "生成一个16进制的随机值",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "GridImageryProvider",
+    "functionDescription": "生成网格贴图",
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "GraphicsLayer",
+    "functionDescription": null,
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "Graphic",
+    "functionDescription": null,
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "Transforms",
+    "functionDescription": null,
+    "parameter": [{ "a": null, "type": null, "parameterDescription": null }]
+  },
+  {
+    "name": "HeadingPitchRoll",
+    "functionDescription": "以航向、俯仰和横滚表示的旋转。航向是围绕负z轴的旋转。Pitch是围绕负y轴的旋转。滚动是围绕正x轴的旋转。",
+    "parameter": [
+      { "a": "heading", "type": "number", "parameterDescription": null },
+      { "a": "pitch", "type": "number", "parameterDescription": null },
+      { "a": "roll", "type": "number", "parameterDescription": null }
+    ]
+  },
+  {
+    "name": "GeoUtils",
+    "functionDescription": "各种转换、获取高度、面积的方法",
+    "parameter": [
+      {
+        "a": "GeoUtils.cartesian2Degrees()",
+        "type": null,
+        "parameterDescription": "弧度转经纬度"
+      },
+      {
+        "a": "GeoUtils.distance(point1, point2)",
+        "type": null,
+        "parameterDescription": "通过经纬度计算两个点的距离"
+      },
+      {
+        "a": "GeoUtils.distanceByCartesian(point1, point2)",
+        "type": null,
+        "parameterDescription": null
+      },
+      {
+        "a": "GeoUtils.spaceDistance(point1, point2)",
+        "type": null,
+        "parameterDescription": "通过经纬度计算两个点的距离（含高度）"
+      },
+      {
+        "a": "GeoUtils.degree2Rad(degree)",
+        "type": null,
+        "parameterDescription": "经度/纬度 转 弧度"
+      },
+      {
+        "a": "GeoUtils.rad2Degree(radians)",
+        "type": null,
+        "parameterDescription": "弧度 转 经度/纬度"
+      },
+      {
+        "a": "GeoUtils.getArea(path, radius)",
+        "type": null,
+        "parameterDescription": "获取面积"
+      },
+      {
+        "a": "GeoUtils.getHeight(viewer, x, y)",
+        "type": null,
+        "parameterDescription": "获取 点位 height(初步确定多点同时获取时存在性能问题)"
+      }
+    ]
+  },
+  {
+    "name": "MapboxStyleImageryProvider",
+    "functionDescription": "加载mapBox地图",
+    "parameter": [
+      { "a": "url", "type": "String", "parameterDescription": "路径" },
+      { "a": "username", "type": "String", "parameterDescription": "图层名称" },
+      {
+        "a": "styleId",
+        "type": "String",
+        "parameterDescription": "图层样式ID"
+      },
+      { "a": "accessToken", "type": "String", "parameterDescription": "token" }
+    ]
+  }
+]

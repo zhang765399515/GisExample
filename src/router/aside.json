@@ -1,0 +1,1483 @@
+[
+  {
+    "id": "1",
+    "name": "快速开始",
+    "path": "/home",
+    "title": "",
+    "children": [
+      {
+        "id": 1,
+        "name": "基础底图",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "base-map/create/base",
+            "name": "skyMapImage",
+            "path": "/skyMapImage",
+            "thumbnail": "basemap.png",
+            "title": "天地图影像"
+          },
+          {
+            "id": "base-map/create/street",
+            "name": "skyMapStreet",
+            "path": "/skyMapStreet",
+            "thumbnail": "street.png",
+            "title": "天地图街道"
+          },
+          {
+            "id": "base-map/create/amap-street",
+            "name": "amapStreet",
+            "path": "/amapStreet",
+            "thumbnail": "amap-street.png",
+            "title": "高德街道"
+          },
+          {
+            "id": "base-map/create/colorful-street",
+            "name": "colorfulStreet",
+            "path": "/colorfulStreet",
+            "thumbnail": "colorful-street.png",
+            "title": "彩色街道"
+          },
+          {
+            "id": "base-map/create/blue",
+            "name": "blueMap",
+            "path": "/blueMap",
+            "thumbnail": "bluemap.png",
+            "title": "蓝黑色街道（有）"
+          },
+          {
+            "id": "base-map/create/gray",
+            "name": "grayMap",
+            "path": "/grayMap",
+            "thumbnail": "gray-map.png",
+            "title": "灰色街道"
+          },
+          {
+            "id": "base-map/create/arcgis",
+            "name": "arcgisMap",
+            "path": "/arcgisMap",
+            "thumbnail": "arcgismap.png",
+            "title": "ArcGIS在线底图"
+          },
+          {
+            "id": "base-map/create/arcgis-warm",
+            "name": "arcgisWarm",
+            "path": "/arcgisWarm",
+            "thumbnail": "arcgis-warm.png",
+            "title": "ArcGIS暖色"
+          },
+          {
+            "id": "base-map/create/arcgis-water",
+            "name": "arcgisWater",
+            "path": "/arcgisWater",
+            "thumbnail": "arcgis-water.png",
+            "title": "ArcGIS水系"
+          },
+          {
+            "id": "base-map/create/arcgis-street",
+            "name": "arcgisStreet",
+            "path": "/arcgisStreet",
+            "thumbnail": "arcgis-street.png",
+            "title": "ArcGIS街道"
+          },
+          {
+            "id": "base-map/create/cesium",
+            "name": "cesiumMap",
+            "path": "/cesiumMap",
+            "thumbnail": "cesiummap.png",
+            "title": "Cesium底图"
+          },
+          {
+            "id": "base-map/create/vector-callout",
+            "name": "VectorMark",
+            "path": "/VectorMark",
+            "thumbnail": "vector-callout.png",
+            "title": "矢量标注"
+          },
+          {
+            "id": "base-map/create/image-mark",
+            "name": "ImageMark",
+            "path": "/ImageMark",
+            "thumbnail": "image-mark.png",
+            "title": "影像标注"
+          },
+          {
+            "id": "base-map/create/curtom-layer",
+            "name": "ImageMark",
+            "path": "/ImageMark",
+            "thumbnail": "image-mark.png",
+            "title": "影像标注"
+          },
+          {
+            "id": "base-map/create/mapColor",
+            "name": "mapColor",
+            "path": "/mapColor",  
+            "thumbnail": "mapColor.png",
+            "title": "地图颜色设置"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "地形叠加与分析",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "base-map/elevation/tif",
+            "title": "tif高程（有）",
+            "name": "tif高程",
+            "thumbnail": "basemap.png",
+            "path": "/tif"
+          },
+          {
+            "id": "base-map/elevation/terrain",
+            "title": "terrain高程（有）",
+            "name": "terrain高程",
+            "thumbnail": "terrain.png",
+            "path": "/terrain"
+          },
+          {
+            "id": "base-map/elevation/arcgis",
+            "title": "Arcgis高程",
+            "name": "Arcgis高程",
+            "thumbnail": "arcgis-terrain.png",
+            "path": "/arcgis"
+          },
+          {
+            "id": "base-map/elevation/collapse",
+            "title": "地形塌陷",
+            "name": "地形塌陷",
+            "thumbnail": "basemap.png",
+            "path": "/collapse"
+          },
+          {
+            "id": "base-map/elevation/burrow",
+            "title": "地形挖洞",
+            "name": "地形挖洞",
+            "thumbnail": "basemap.png",
+            "path": "/burrow" 
+          },
+          {
+            "id": "base-map/elevation/flatten",
+            "title": "地形压平",
+            "name": "地形压平",
+            "thumbnail": "basemap.png",
+            "path": "/flatten"
+          },
+          {
+            "id": "base-map/elevation/exaggeration",
+            "title": "地形夸张",
+            "name": "地形夸张",
+            "thumbnail": "exaggeration.png",
+            "path": "/exaggeration"
+          },
+          {
+            "id": "base-map/elevation/profile",
+            "title": "剖面分析",
+            "name": "剖面分析",
+            "thumbnail": "basemap.png",
+            "path": "/profile"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "点对象",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "basic-draw/point/point",
+            "title": "基础点",
+            "path": "/draw",
+            "thumbnail": "point.png"
+          },
+          {
+            "id": "basic-draw/point/label",
+            "title": "文字",
+            "name": "文字",
+            "thumbnail": "text.png",
+            "path": "/label"
+          },
+          {
+            "id": "basic-draw/point/icon-point",
+            "title": "图标点",
+            "name": "图标点",
+            "thumbnail": "icon-point.png",
+            "path": "/iconPoint"
+          },
+          {
+            "id": "basic-draw/point/aggregate",
+            "title": "点聚合效果（有，但有问题）",
+            "thumbnail": "polymerize.png",
+            "name": "点聚合效果",
+            "path": "/GraphicsCluster"
+          },
+          {
+            "id": "basic-draw/point/div-point",
+            "title": "DIV点",
+            "name": "DIV点",
+            "thumbnail": "div-point.png",
+            "path": "/divPoint"
+          },
+          {
+            "id": "basic-draw/point/div-line",
+            "title": "DIV点",
+            "name": "DIV点",
+            "thumbnail": "div-line.png",
+            "path": "/divLine"
+          },
+          {
+            "id": "basic-draw/point/dynamic-div-point",
+            "title": "动态DIV点",
+            "name": "动态DIV点",
+            "thumbnail": "dynamic-div-point.gif",
+            "path": "/dynamic-divPoint"
+          },
+          {
+            "id": "basic-draw/point/billboard",
+            "title": "广告牌",
+            "name": "广告牌",
+            "thumbnail": "billboard.png",
+            "path": "/billboard"
+          },
+          {
+            "id": "basic-draw/point/billboard-line",
+            "title": "广告牌",
+            "name": "广告牌",
+            "thumbnail": "billboard-line.png",
+            "path": "/billboard-line"
+          },
+          {
+            "id": "basic-draw/point/flashing",
+            "title": "闪烁点",
+            "name": "闪烁点",
+            "thumbnail": "flashing-point.gif",
+            "path": "/flashing"
+          },
+          {
+            "id": "basic-draw/point/interpolation",
+            "title": "规律插值点",
+            "thumbnail": "basemap.png",
+            "name": "规律插值",
+            "path": "/CircularAcquisition"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "线对象",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "basic-draw/polyline/polyline",
+            "title": "基础线",
+            "name": "基础线",
+            "thumbnail": "polyline.png",
+            "path": "/polyline"
+          },
+          {
+            "id": "basic-draw/polyline/dynamic-line",
+            "title": "动态线",
+            "name": "动态线",
+            "thumbnail": "dynamic-line.gif",
+            "path": "/dynamicLine"
+          },
+          {
+            "id": "basic-draw/polyline/glowing-line",
+            "title": "发光线",
+            "name": "发光线",
+            "thumbnail": "glowing-line.png",
+            "path": "/glowingLine"
+          },
+          {
+            "id": "basic-draw/polyline/trajectory-line",
+            "title": "动态轨迹线",
+            "name": "动态轨迹线",
+            "thumbnail": "trajectory-line.gif",
+            "path": "/trajectoryLine"
+          },
+          {
+            "id": "basic-draw/polyline/elf-line",
+            "title": "精灵线",
+            "name": "精灵线",
+            "thumbnail": "basemap.png",
+            "path": "/elfLine"
+          },
+          {
+            "id": "basic-draw/polyline/fly-line",
+            "title": "飞线",
+            "name": "飞线",
+            "thumbnail": "fly-line.gif",
+            "path": "/flyLine"
+          },
+          {
+            "id": "basic-draw/polyline/wake-line",
+            "title": "尾迹线",
+            "name": "尾迹线",
+            "thumbnail": "wake-line.gif",
+            "path": "/wakeLine"
+          },
+          {
+            "id": "basic-draw/polyline/arrow-line",
+            "title": "箭头线",
+            "name": "箭头线",
+            "thumbnail": "arrow-line.gif",
+            "path": "/arrowLine"
+          },
+          {
+            "id": "basic-draw/polyline/migration-line",
+            "title": "迁徙线",
+            "name": "迁徙线",
+            "thumbnail": "basemap.png",
+            "path": "/migrationLine"
+          },
+          {
+            "id": "basic-draw/polyline/light-line",
+            "title": "光效线",
+            "name": "光效线",
+            "thumbnail": "basemap.png",
+            "path": "/lightLine"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "面对象",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "basic-draw/polygon/polygon",
+            "title": "基础面",
+            "name": "基础面",
+            "thumbnail": "basemap.png",
+            "path": "/polygon"
+          },
+          {
+            "id": "basic-draw/polygon/gradient-polygon",
+            "title": "区域渐变",
+            "name": "区域渐变",
+            "thumbnail": "basemap.png",
+            "path": "/gradientPolygon"
+          },
+          {
+            "id": "basic-draw/polygon/dynamic-water",
+            "title": "动态水面",
+            "name": "动态水面",
+            "thumbnail": "water.gif",
+            "path": "/dynamicWater"
+          },
+          {
+            "id": "basic-draw/polygon/mask-polygon",
+            "title": "局部反选遮罩",
+            "name": "局部反选遮罩",
+            "thumbnail": "mask.png",
+            "path": "/maskPolygon"
+          },
+          {
+            "id": "basic-draw/polygon/mask-div",
+            "title": "容器遮罩",
+            "name": "容器遮罩",
+            "thumbnail": "mask-div.png",
+            "path": "/maskDiv"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "圆对象",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "basic-draw/entity/underground",
+            "title": "基础圆",
+            "thumbnail": "basemap.png",
+            "name": "基础圆",
+            "path": "/underground"
+          },
+          {
+            "id": "basic-draw/image/canvas",
+            "title": "扩散圆",
+            "thumbnail": "basemap.png",
+            "name": "扩散圆",
+            "path": "/qxyt"
+          },
+          {
+            "id": "dynamic/chart/diffusion",
+            "title": "扫描发光效果",
+            "name": "扫描发光效果",
+            "thumbnail": "diffusioncircle.gif",
+            "path": "/CustomMaterial",
+            "url": "components/baseMap/CustomMaterial.vue"
+          },
+          {
+            "id": "basic-draw/circular/radarScanning",
+            "title": "雷达扫描",
+            "thumbnail": "basemap.png",
+            "name": "雷达扫描",
+            "path": "/radarScanning"
+          },
+          {
+            "title": "扇形扫描",
+            "thumbnail": "basemap.png",
+            "name": "扇形扫描",
+            "path": "/LayerElevationGrandient",
+            "url": "components/baseMap/LayerElevationGrandient.vue"
+          },
+          {
+            "id": "basic-draw/rotate/images",
+            "title": "旋转图片",
+            "thumbnail": "rotateImg.gif",
+            "name": "旋转图片",
+            "path": "/rotateImg"
+          },
+          {
+            "id": "basic-draw/rotate/gltf",
+            "title": "旋转模型",
+            "thumbnail": "rotateGltf.gif",
+            "name": "旋转模型",
+            "path": "/rotateGltf"
+          },
+          {
+            "id": "basic-draw/blinkCircle",
+            "title": "闪烁圆",
+            "thumbnail": "blinkCircle.gif",
+            "name": "闪烁圆",
+            "path": "/blinkCircle"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "立体对象",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "tiles/b3dm/pipe",
+            "title": "圆柱体",
+            "name": "三维管网+3DTiles",
+            "path": "/PGEarth3DTilesPipe",
+            "thumbnail": "basemap.png",
+            "url": "components/baseMap/PGEarth3DTilesPipe.vue"
+          },
+          {
+            "title": "正方体",
+            "name": "三维管网+Json",
+            "path": "/Json3DPipe",
+            "thumbnail": "basemap.png",
+            "url": "components/baseMap/Json3DPipe.vue"
+          },
+          {
+            "id": "tiles/b3dm/dzmx",
+            "title": "长方体",
+            "name": "三维管网+Primitive",
+            "path": "/Primitive3DPipe",
+            "thumbnail": "basemap.png",
+            "url": "components/baseMap/Primitive3DPipe.vue"
+          },
+          {
+            "id": "tiles/b3dm/cloud",
+            "title": "半圆体",
+            "name": "加载点云",
+            "path": "/LayerSceneCloud",
+            "thumbnail": "basemap.png",
+            "url": "components/baseMap/LayerSceneCloud.vue"
+          },
+          {
+            "id": "dynamic/analysis/wall",
+            "title": "基础立体墙（有）",
+            "name": "基础立体墙",
+            "thumbnail": "glare-wall.png",
+            "path": "/StereoscopicWall",
+            "url": "components/baseMap/StereoscopicWall.vue"
+          },
+          {
+            "id": "dynamic/analysis/dynamic-wall",
+            "title": "动态立体墙（有）",
+            "name": "动态立体墙",
+            "thumbnail": "dynamic-wall.gif",
+            "path": "/StereoscopicWall",
+            "url": "components/baseMap/StereoscopicWall.vue"
+          },
+          {
+            "id": "dynamic/analysis/three-dimensional/gradientWall",
+            "title": "渐变立体墙",
+            "name": "渐变立体墙",
+            "path": "/gradientWall",
+            "thumbnail": "gradientWall.png"
+          },
+          {
+            "id": "basic-draw/primitive/gradual",
+            "title": "渐变行政区划面（有）",
+            "thumbnail": "center-gradual.png",
+            "name": "渐变行政区划面",
+            "path": "/GradualAdministrative",
+            "url": "components/baseMap/GradualAdministrative.vue"
+          },
+          {
+            "id": "basic-draw/rotateCylinder",
+            "title": "圆柱",
+            "thumbnail": "rotateCylinder.gif",
+            "name": "圆柱",
+            "path": "/rotateCylinder"
+          },
+          {
+            "id": "basic-draw/coneCylinder",
+            "title": "圆锥",
+            "thumbnail": "ConeCylinder.png",
+            "name": "圆锥",
+            "path": "/coneCylinder"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "GeoServer查询",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "dynamic/analysis/inundation",
+            "name": "淹没分析(动态)",
+            "title": "圆查询",
+            "thumbnail": "basemap.png",
+            "path": "/UnderGround3D",
+            "url": "components/baseMap/Underground3D.vue"
+          },
+          {
+            "id": "dynamic/analysis/shutter",
+            "name": "淹没分析",
+            "title": "矩形查询",
+            "thumbnail": "basemap.png",
+            "path": "/widgets_yanmo",
+            "url": "components/baseMap/widgets-yanmo.vue"
+          },
+          {
+            "title": "半径查询",
+            "thumbnail": "basemap.png",
+            "name": "PLD-倾斜摄影",
+            "path": "/LayerLodMesh",
+            "url": "components/baseMap/LayerLodMesh.vue"
+          },
+          {
+            "title": "自定义形状查询",
+            "thumbnail": "basemap.png",
+            "name": "倾斜摄影的移动缩放",
+            "path": "/LayerSceneMove",
+            "url": "components/baseMap/LayerSceneMove.vue"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "标注标绘",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "title": "直线箭头",
+            "name": "扩散中心+旋转圆弧",
+            "thumbnail": "basemap.png",
+            "path": "/CustomMaterial",
+            "url": "components/baseMap/CustomMaterial.vue"
+          },
+          {
+            "title": "钳击箭头",
+            "thumbnail": "basemap.png",
+            "name": "绘制贴于倾斜摄影的面",
+            "path": "/LayerScene",
+            "url": "components/baseMap/LayerScene.vue"
+          },
+          {
+            "id": "layers/image/url",
+            "title": "攻击箭头（燕尾、平尾）",
+            "thumbnail": "basemap.png",
+            "name": "URLTemplate影像图",
+            "path": "/LayerURLTemplate",
+            "url": "components/baseMap/LayerURLTemplate.vue"
+          },
+          {
+            "title": "集结地",
+            "thumbnail": "basemap.png",
+            "name": "ReadB3dmTest1",
+            "path": "/ReadB3dmTest1",
+            "url": "components/baseMap/ReadB3dmTest1.vue"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "粒子效果",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "effect/particle/fire",
+            "title": "火焰",
+            "name": "火焰",
+            "thumbnail": "fire.gif",
+            "path": "/fire"
+          },
+          {
+            "id": "effect/particle/night",
+            "title": "夜视",
+            "name": "夜视",
+            "thumbnail": "night.png",
+            "path": "/night"
+          },
+          {
+            "id": "effect/particle/black-white",
+            "title": "黑白",
+            "thumbnail": "black-white.png",
+            "name": "黑白",
+            "path": "/black-white"
+          },
+          {
+            "id": "effect/particle/black",
+            "title": "黑夜",
+            "thumbnail": "black.png",
+            "name": "黑夜",
+            "path": "/black"
+          },
+          {
+            "id":"effect/particle/rain",
+            "title": "雨",
+            "thumbnail": "rain.gif",
+            "name": "雨",
+            "path": "/rain"
+          },
+          {
+            "id": "effect/particle/snow",
+            "title": "雪",
+            "thumbnail": "snow.gif",
+            "name": "雪",
+            "path": "/snow"
+          },
+          {
+            "id":"effect/particle/fog",
+            "title": "雾",
+            "thumbnail": "fog.png",
+            "name": "雾",
+            "path": "/fog"
+          },
+          {
+            "id": "effect/particle/primitives-wind",
+            "title": "风场",
+            "thumbnail": "wind.png",
+            "name": "风场",
+            "path": "/PrimitivesWind"
+          },
+          {
+            "id":"effect/particle/lightning",
+            "title": "雷",
+            "thumbnail": "lightning.gif",
+            "name": "雷",
+            "path": "/lightning"
+          },
+          {
+            "id":"effect/particle/explosion",
+            "title": "爆炸",
+            "thumbnail": "explosionEff.gif",
+            "name": "爆炸",
+            "path": "/explosion"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "基础功能",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "base-map/basic/measure",
+            "title": "基础测量",
+            "name": "基础测量",
+            "thumbnail": "whole.png",
+            "path": "/whole"
+          },
+          {
+            "id": "base-map/basic/fps-scale",
+            "title": "帧率、比例尺",
+            "name": "帧率、比例尺",
+            "thumbnail": "basemap.png",
+            "path": "/fps-scale"
+          },
+          {
+            "id": "base-map/basic/latlon",
+            "title": "经纬度获取",
+            "thumbnail": "basemap.png",
+            "name": "经纬度获取",
+            "path": "/latlon"
+          },
+          {
+            "id": "base-map/basic/map-switch",
+            "title": "底图切换",
+            "thumbnail": "basemap.png",
+            "name": "底图切换",
+            "path": "/map-switch"
+          },
+          {
+            "id": "base-map/basic/map-transparency",
+            "title": "地图透明功能（有）",
+            "name": "地图透明功能",
+            "thumbnail": "surface.png",
+            "path": "/LayerTerrainDem",
+            "url": "components/baseMap/LayerTerrainDem.vue"
+          },
+          {
+            "id":"base-map/basic/camera",
+            "title": "视角获取与设置",
+            "thumbnail": "camera.png",
+            "name": "视角获取与设置",
+            "path": "/camera"
+          },
+          {
+            "id":"base-map/basic/depth-terrain",
+            "title": "开关深度拾取",
+            "thumbnail": "depth-terrain.png",
+            "name": "开关深度拾取",
+            "path": "/depth-terrain"
+          },
+          {
+            "id": "base-map/basic/focusVisual",
+            "name": "鹰眼地图",
+            "title": "鹰眼地图",
+            "thumbnail": "basemap.png",
+            "path": "/focusVisual"
+          },
+          {
+            "id": "base-map/basic/surround-roaming",
+            "name": "绕点漫游",
+            "title": "绕点漫游（有）",
+            "thumbnail": "surround-roaming.gif",
+            "path": "/widgets-Fly-roundCenter"
+          },
+          {
+            "id": "base-map/basic/rotate",
+            "name": "地球自转",
+            "title": "地球自转（有）",
+            "thumbnail": "earth-rotate.gif",
+            "path": "/widgets-Fly-rotation"
+          },
+          {
+            "id": "base-map/basic/roaming",
+            "title": "地下漫游（有）",
+            "name": "地下漫游",
+            "thumbnail": "roam.gif",
+            "path": "/roam-basic",
+            "url": "components/baseMap/roam.vue"
+          },
+          {
+            "id": "base-map/basic/roaming",
+            "name": "地面漫游",
+            "title": "地面漫游（有）",
+            "thumbnail": "roaming.gif",
+            "path": "/widgets-Fly",
+            "url": "components/baseMap/widgets-Fly.vue"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "基础分析",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id":"base-map/analysis/virtualBorehole",
+            "title": "虚拟钻孔",
+            "thumbnail": "virtualBrill.png",
+            "name": "虚拟钻孔",
+            "path": "/virtualBorehole"
+          },
+          {
+            "id":"base-map/analysis/sunlight",
+            "title": "日照分析",
+            "thumbnail": "basemap.png",
+            "name": "日照分析",
+            "path": "/sunlight"
+          },
+          {
+            "id":"dynamic/analysis/visible",
+            "title": "可视域分析",
+            "thumbnail": "basemap.png",
+            "name": "可视域分析",
+            "path": "/visible"
+          },
+          {
+            "id":"base-map/analysis/contour-line",
+            "title": "等高线图层",
+            "thumbnail": "basemap.png",
+            "name": "等高线图层",
+            "path": "/contour-line"
+          },
+          {
+            "id": "base-map/analysis/height-limiting",
+            "title": "控高分析",
+            "name": "控高分析",
+            "thumbnail": "basemap.png",
+            "path": "/height-limiting"
+          },
+          {
+            "id": "base-map/analysis/skyline",
+            "title": "天际线分析",
+            "name": "天际线分析",
+            "thumbnail": "basemap.png",
+            "path": "/skyline"
+          },
+          {
+            "id": "base-map/analysis/slope",
+            "title": "坡度坡向分析",
+            "name": "坡度坡向分析",
+            "thumbnail": "basemap.png",
+            "path": "/slope"
+          },
+          {
+            "id": "base-map/analysis/cutandfill",
+            "title": "挖填方分析",
+            "name": "挖填方分析",
+            "thumbnail": "basemap.png",
+            "path": "/cutandfill"
+          },
+          {
+            "id": "tiles/b3dm/explosion",
+            "title": "地质模型爆炸分析（有 待确定是否更换目录）",
+            "name": "地质模型爆炸分析",
+            "path": "/LayerSceneCloud",
+            "thumbnail": "explosion.gif"
+          },
+          {
+            "id": "vector/cad/billboard",
+            "title": "CAD预览",
+            "name": "CAD预览",
+            "thumbnail": "basemap.png",
+            "path": "/KML",
+            "url": "components/baseMap/KMLDataSources.vue"
+          },
+          {
+            "id": "base-map/analysis/connected23D",
+            "title": "二三维联动分析",
+            "name": "二三维联动分析",
+            "thumbnail": "basemap.png",
+            "path": "/connected23D"
+          },
+          {
+            "id": "base-map/analysis/inundation",
+            "name": "淹没分析(动态)",
+            "title": "淹没分析(动态)（有）",
+            "thumbnail": "inundation.gif",
+            "path": "/inundation"
+          },
+          {
+            "id": "base-map/analysis/shutter",
+            "name": "淹没分析",
+            "title": "淹没分析（有）",
+            "thumbnail": "basemap.png",
+            "path": "/widgets_yanmo"
+          },
+          {
+            "id": "base-map/analysis/slider-shutter",
+            "title": "分屏卷帘（有）",
+            "thumbnail": "slider-shutter.gif",
+            "name": "分屏卷帘",
+            "path": "/slider-shutter"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "场景控制",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id":"view/control/screenshots",
+            "title": "场景出图",
+            "thumbnail": "basemap.png",
+            "name": "场景出图",
+            "path": "/screenshots"
+          },
+          {
+            "id":"view/control/skybox-diy",
+            "name": "自定义天空盒",
+            "title": "自定义天空盒",
+            "thumbnail": "basemap.png",
+            "path": "/skyboxDiy"
+          },
+          {
+            "id": "view/control/skybox-ground",
+            "name": "近地天空盒",
+            "title": "近地天空盒",
+            "thumbnail": "basemap.png",
+            "path": "/skyboxGround"
+          },
+          {
+            "id": "view/control/background-diy",
+            "name": "自定义空间背景",
+            "title": "自定义空间背景",
+            "thumbnail": "basemap.png",
+            "path": "/backgroundDiy"
+          },
+          {
+            "id": "view/control/keyboard",
+            "name": "键盘控制",
+            "title": "键盘控制（有）",
+            "thumbnail": "keyboard.gif",
+            "path": "/keyboard"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "视频应用",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "video/create/overlay-map",
+            "name": "影像叠加视频",
+            "title": "影像叠加视频",
+            "thumbnail": "basemap.png",
+            "path": "/overlayMap"
+          },
+          {
+            "id": "video/create/overlay-oblique",
+            "name": "倾斜摄影叠加视频",
+            "title": "倾斜摄影叠加视频",
+            "thumbnail": "basemap.png",
+            "path": "/overlayOblique"
+          },
+          {
+            "id": "video/create/point",
+            "title": "视频点位展示",
+            "name": "视频点位展示",
+            "thumbnail": "basemap.png",
+            "path": "/point"
+          },
+          {
+            "id": "basic-draw/video/plane",
+            "name": "视频材质（面状对象）",
+            "title": "视频材质（面状对象）",
+            "thumbnail": "basemap.png",
+            "path": "/video-plane"
+          },
+          {
+            "id": "video/create/video2D",
+            "name": "视频2D投射",
+            "title": "视频2D投射",
+            "thumbnail": "basemap.png",
+            "path": "/video2D"
+          },
+          {
+            "id": "video/create/video3D",
+            "name": "视频3D投射",
+            "title": "视频3D投射",
+            "thumbnail": "basemap.png",
+            "path": "/video3D"
+          },
+          {
+            "id": "basic-draw/video/gif",
+            "name": "gif投射",
+            "title": "gif投射",
+            "thumbnail": "billboard-gif.png",
+            "path": "/billboard-gif"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "数据加载",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "title": "TIF影像(.tif)",
+            "thumbnail": "basemap.png",
+            "name": "热力图",
+            "path": "/LayerHeatMap",
+            "url": "components/baseMap/LayerHeatMap.vue"
+          },
+          {
+            "id": "dynamic/analysis/primitives-wind",
+            "title": "terrain高程(.terrain)",
+            "thumbnail": "basemap.png",
+            "name": "风场",
+            "path": "/PrimitivesWind",
+            "url": "components/baseMap/primitives-wind.vue"
+          },
+          {
+            "id": "dynamic/analysis/graphics-cluster",
+            "title": "TIF高程(.tif)",
+            "thumbnail": "basemap.png",
+            "name": "点聚合效果",
+            "path": "/GraphicsCluster",
+            "url": "components/baseMap/GraphicsCluster.vue"
+          },
+          {
+            "id": "layers/shp",
+            "title": "SHP矢量(.shp)",
+            "thumbnail": "basemap.png",
+            "name": "SHP矢量(.shp)",
+            "path": "/shp"
+          },
+          {
+            "id": "model/b3dm",
+            "title": "3dtiles模型(.json)",
+            "thumbnail": "basemap.png",
+            "name": "3dtiles模型(.json)",
+            "path": "/tileset"
+          },
+          {
+            "id": "dynamic/analysis/graphics-cluster",
+            "title": "TMS影像(.png、.jpg)",
+            "thumbnail": "basemap.png",
+            "name": "点聚合效果",
+            "path": "/GraphicsCluster",
+            "url": "components/baseMap/GraphicsCluster.vue"
+          },
+          {
+            "title": "Geojson(.json)",
+            "thumbnail": "basemap.png",
+            "name": "热力图",
+            "path": "/LayerHeatMap",
+            "url": "components/baseMap/LayerHeatMap.vue"
+          },
+          {
+            "id": "tiles/b3dm/cloud",
+            "title": "LAS数据(.json、.las)（有）",
+            "name": "加载点云",
+            "path": "/LayerSceneCloud",
+            "thumbnail": "cloud.png",
+            "url": "components/baseMap/LayerSceneCloud.vue"
+          },
+          {
+            "id": "dynamic/analysis/graphics-cluster",
+            "title": "OSGB数据(.xml)",
+            "thumbnail": "basemap.png",
+            "name": "点聚合效果",
+            "path": "/GraphicsCluster",
+            "url": "components/baseMap/GraphicsCluster.vue"
+          },
+          {
+            "title": "OBJ数据(.obj)",
+            "thumbnail": "basemap.png",
+            "name": "热力图",
+            "path": "/LayerHeatMap",
+            "url": "components/baseMap/LayerHeatMap.vue"
+          },
+          {
+            "id": "dynamic/analysis/primitives-wind",
+            "title": "FBX数据(.fbx)",
+            "thumbnail": "basemap.png",
+            "name": "风场",
+            "path": "/PrimitivesWind",
+            "url": "components/baseMap/primitives-wind.vue"
+          },
+          {
+            "id": "dynamic/analysis/graphics-cluster",
+            "title": "OSG数据(.osg)",
+            "thumbnail": "basemap.png",
+            "name": "点聚合效果",
+            "path": "/GraphicsCluster",
+            "url": "components/baseMap/GraphicsCluster.vue"
+          },
+          {
+            "title": "IMG数据(.img)",
+            "thumbnail": "basemap.png",
+            "name": "热力图",
+            "path": "/LayerHeatMap",
+            "url": "components/baseMap/LayerHeatMap.vue"
+          },
+          {
+            "id": "model/gltf/create",
+            "title": "GLTF数据(.gltf)（有）",
+            "thumbnail": "cloneMod.png",
+            "name": "GLTF模型绘制",
+            "path": "/GraphicsModel",
+            "url": "components/baseMap/GraphicsModel.vue"
+          },
+          {
+            "id": "basic-draw/entity/underground",
+            "title": "钻孔数据（有）",
+            "thumbnail": "underground.png",
+            "name": "地下三维",
+            "path": "/UnderGround3D",
+            "url": "components/baseMap/Underground3D.vue"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "模型编辑",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "model/edit-model/model-outline",
+            "title": "模型描边",
+            "thumbnail": "basemap.png",
+            "name": "模型描边",
+            "path": "/modelOutline"
+          },
+          {
+            "id": "model/edit-model/model-floodlight",
+            "title": "模型泛光",
+            "thumbnail": "basemap.png",
+            "name": "模型泛光",
+            "path": "/modelFloodlight"
+          },
+          {
+            "id": "model/edit-model/gltf-edit",
+            "title": "GLTF模型属性编辑",
+            "thumbnail": "basemap.png",
+            "name": "GLTF模型属性编辑",
+            "path": "/gltfEdit"
+          },
+          {
+            "id": "model/edit-model/tiles-edit",
+            "title": "3dtiles模型属性编辑",
+            "thumbnail": "basemap.png",
+            "name": "3dtiles模型属性编辑",
+            "path": "/tilesEdit"
+          },
+          {
+            "id": "model/edit-model/tiles-flatten",
+            "title": "3dtiles模型压平(有)",
+            "thumbnail": "basemap.png",
+            "name": "3dtiles模型压平",
+            "path": "/tilesFlatten"
+          },
+          {
+            "id": "model/edit-model/cylinder-gradient",
+            "title": "渐变钻孔模型(有)",
+            "thumbnail": "gradientDrill.png",
+            "name": "渐变钻孔模型",
+            "path": "/cylinderGradient"
+          },
+          {
+            "id": "model/edit-model/model-slice",
+            "title": "模型剖切（不封面）",
+            "thumbnail": "basemap.png",
+            "name": "模型剖切（不封面）",
+            "path": "/modelSlice"
+          },
+          {
+            "id": "model/edit-model/model-slice-pk",
+            "title": "模型剖切(PK-封面)",
+            "thumbnail": "basemap.png",
+            "name": "模型剖切(PK-封面)",
+            "path": "/modelSlicePK"
+          },
+          {
+            "id": "model/edit-model/model-slice-port",
+            "title": "模型剖切（接口-封面）",
+            "thumbnail": "basemap.png",
+            "name": "模型剖切（接口-封面）",
+            "path": "/modelSlicePort"
+          },
+          {
+            "id": "model/edit-model/model-boundingbox",
+            "title": "模型包围盒",
+            "thumbnail": "basemap.png",
+            "name": "模型包围盒",
+            "path": "/modelBoundingBox"
+          },
+          {
+            "id": "model/edit-model/bacth-gltf",
+            "title": "批量添加（GLTF）模型",
+            "thumbnail": "basemap.png",
+            "name": "批量添加（GLTF）模型",
+            "path": "/bacthGltf"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "空间分析",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "basic-draw/primitive/gradual",
+            "title": "最近点分析",
+            "thumbnail": "basemap.png",
+            "name": "渐变行政区划面",
+            "path": "/GradualAdministrative",
+            "url": "components/baseMap/GradualAdministrative.vue"
+          },
+          {
+            "id": "basic-draw/graphic/bessel",
+            "title": "贝兹曲线（由直角线段变成曲线）（有）",
+            "thumbnail": "bezier.png",
+            "name": "贝兹曲线（由直角线段变成曲线）",
+            "path": "/widgets-bezierSpline",
+            "url": "components/baseMap/widgets-bezierSpline.vue"
+          },
+          {
+            "id": "tiles/b3dm/flatten",
+            "title": "模拟·仿真-动画脚本演示",
+            "thumbnail": "basemap.png",
+            "name": "3dtiles模型压平",
+            "path": "/model_flatten",
+            "url": "components/baseMap/model_flatten.vue"
+          },
+          {
+            "id": "basic-draw/primitive/column",
+            "title": "渐变柱子",
+            "thumbnail": "column.png",
+            "name": "渐变柱子",
+            "path": "/column",
+            "url": "components/baseMap/column.vue"
+          },
+          {
+            "id": "basic-draw/primitive/pointLightSource",
+            "title": "发光点",
+            "thumbnail": "pointLightSource.png",
+            "name": "发光点",
+            "path": "/pointLightSource",
+            "url": "components/baseMap/pointLightSource.vue"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "PGEarth + Echarts",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "basic-draw/primitive/huge",
+            "title": "星光图",
+            "thumbnail": "huge-point.png",
+            "name": "星光图",
+            "path": "/LayerFlights",
+            "url": "components/baseMap/LayerFlights.vue"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "三维地形",
+    "path": "/",
+    "url": "views/index.vue",
+    "children": [
+      {
+        "id": "2-1",
+        "name": "地形加载",
+        "path": "",
+        "url": "",
+        "children": [
+          {
+            "id": "map/elevation/tif",
+            "title": "tif高程",
+            "name": "tif高程",
+            "thumbnail": "basemap.png",
+            "path": "/LayerElevation",
+            "url": "components/baseMap/LayerElevation.vue"
+          },
+          {
+            "id": "map/elevation/terrain",
+            "title": "terrain高程",
+            "name": "terrain高程",
+            "thumbnail": "terrain.png",
+            "path": "/LayerTerrainDem",
+            "url": "components/baseMap/LayerTerrainDem.vue"
+          },
+          {
+            "id": "map/elevation/arcgis",
+            "title": "ArcGIS高程",
+            "name": "ArcGIS高程",
+            "thumbnail": "elevation-arcgis.png",
+            "path": "/LayerTerrainArcGIS",
+            "url": "components/baseMap/LayerTerrainArcGIS.vue"
+          }
+        ]
+      },
+      {
+        "id": "2-2",
+        "name": "地形相关分析",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "map/elevation/flatTerrain",
+            "title": "地形透明功能",
+            "name": "地形透明功能",
+            "thumbnail": "surface.png",
+            "path": "/LayerTerrainDem"
+          },
+          {
+            "id": "map/elevation/flatten",
+            "title": "地形压平功能",
+            "name": "地形压平功能",
+            "thumbnail": "terrain.png",
+            "path": "/LayerTerrainDem"
+          },
+          {
+            "id": "map/elevation/excavation",
+            "title": "地形开挖",
+            "name": "地形开挖",
+            "thumbnail": "terrain.png",
+            "path": "/excavation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "基础控件",
+    "path": "/",
+    "url": "views/index.vue",
+    "title": "",
+    "children": [
+      {
+        "id": "3-1",
+        "name": "支持的控件",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "util/split/shutter",
+            "title": "分屏卷帘",
+            "thumbnail": "slider-shutter.gif",
+            "name": "分屏卷帘",
+            "path": "/shutter"
+          }
+        ]
+      },
+      {
+        "id": "3-2",
+        "name": "内置控件",
+        "path": "",
+        "url": "",
+        "title": "",
+        "children": [
+          {
+            "id": "view/camera/keyboard",
+            "name": "键盘控制",
+            "title": "键盘控制",
+            "thumbnail": "keyboard.gif",
+            "path": "/keyboard"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "瓦片图层服务",
+    "path": "/",
+    "url": "views/index.vue",
+    "children": [
+      {
+        "id": "4-1",
+        "name": "Mapbox",
+        "path": "",
+        "url": "",
+        "children": [
+          {
+            "id": "layers/image/tms",
+            "title": "Mapbox图层",
+            "thumbnail": "mapbox.png",
+            "name": "Mapbox图层",
+            "path": "/LayerTMS",
+            "url": "components/baseMap/LayerTMS.vue"
+          }
+        ]
+      },
+      {
+        "id": "4-1",
+        "name": "Arcgis矢量数据",
+        "path": "",
+        "url": "",
+        "children": [
+          {
+            "id": "layers/image/tms",
+            "title": "ArcGIS数据（矢量）",
+            "thumbnail": "mapbox.png",
+            "name": "Mapbox图层",
+            "path": "/LayerTMS",
+            "url": "components/baseMap/LayerTMS.vue"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "第三方可视化",
+    "path": "/",
+    "url": "views/index.vue",
+    "children": [
+      {
+        "id": "5-1",
+        "name": "Echarts",
+        "path": "",
+        "url": "",
+        "children": [
+          {
+            "id": "visual/layers/flights",
+            "title": "echarts散点图",
+            "name": "echarts散点图",
+            "thumbnail": "echarts-scatter.png",
+            "path": "/PointPrimitiveCollection",
+            "url": "components/baseMap/PointPrimitiveCollection.vue"
+          },
+          {
+            "id": "dynamic/chart/migration",
+            "title": "迁徙图",
+            "thumbnail": "migration.png",
+            "name": "迁徙图",
+            "path": "/widgets-MigraeChartline",
+            "url": "components/baseMap/widgets-MigraeChartline.vue"
+          }
+        ]
+      },
+      {
+        "id": "5-2",
+        "name": "Heatmap",
+        "path": "",
+        "url": "",
+        "children": [
+          {
+            "id": "components/baseMap/LayerHeatMap.vue",
+            "title": "热力图",
+            "name": "热力图",
+            "thumbnail": "basemap.png",
+            "path": "/LayerHeatMap"
+          }
+        ]
+      }
+    ]
+  }
+]
