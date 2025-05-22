@@ -416,6 +416,7 @@ const createVnodeFun = () => {
         if(i == 0){
             flyTo(infoTextData[i].lon,infoTextData[i].lat)
         }
+        
         const label = new DivLabel(infoTextData[i], i)
         // divNodes.push(label._vnode);
     }

@@ -104,11 +104,6 @@ const handleDelete = (index:number,data:any) => {
             </el-form>
         </Search>
         <Card>
-            <!-- 操作按钮 -->
-            <template v-slot:header-control>
-                <el-button type="primary" icon="Plus" @click="addMenuScene">新增</el-button>
-            </template>
-            <!-- 右侧按钮 -->
             <template v-slot:end-control></template>
             <el-table
                 :data="tableData"
@@ -137,12 +132,6 @@ const handleDelete = (index:number,data:any) => {
                     <el-button v-if="scope.row.isVisible == 1" type="primary" plain>可见</el-button>
                     <el-button v-else type="danger" plain>不可见</el-button>
                   </template>
-                </el-table-column>
-                <el-table-column label="操作">
-                    <template #default="scope">
-                        <el-button type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                        <el-button type="text" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-                    </template>
                 </el-table-column>
             </el-table>
         </Card>

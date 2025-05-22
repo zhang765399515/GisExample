@@ -37,12 +37,11 @@ let tileset: Geokey3DTileset | undefined = undefined;
 
 export async function updateExaggeration(val: number) {
   window.window.viewer.scene.globe.depthTestAgainstTerrain = true;
-  let elevationLayer = new GeokeyTerrainProvider({
-    url: 'http://14.22.86.227:12022/service/gis/3DModel/?serviceName=sz_dem',
+  let elevationLayer = await GeokeyTerrainProvider.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/?serviceName=sz_dem', {
     requestVertexNormals: true,
     requestWaterMask: true
   });
-  window.window.viewer.terrainProvider = elevationLayer;
+  window.viewer.terrainProvider = elevationLayer;
 
   // positions = [];
   // const layerEvent = new EventDriven(window.viewer);

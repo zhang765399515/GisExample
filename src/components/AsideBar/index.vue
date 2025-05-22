@@ -8,6 +8,8 @@ const tableData: Menu[] = ref([]);
 const instance = getCurrentInstance();
 //锚点跳转
 const getList = (list:any) => {
+  console.log(1);
+  
     getMenu(list).then(res=>{
       tableData.value = res.data;
     })

@@ -13,7 +13,7 @@ let rotation = CMath.toRadians(30);
 //   return Rectangle.fromDegrees(west, -90, east, 90);
 // //   return rotation;
 // }
-export function loadDynamicCloud(){
+export function load(){
             let west = -180, east = -180
             window.viewer.entities.add({
                 rectangle: {

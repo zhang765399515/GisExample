@@ -76,10 +76,6 @@ const add = () => {
       </el-form>
     </Search>
     <Card>
-      <!-- 操作按钮 -->
-      <template v-slot:header-control>
-        <el-button type="primary" icon="Plus" @click="add">新增</el-button>
-      </template>
       <!-- 右侧按钮 -->
       <template v-slot:end-control></template>
       <el-table :data="tableData" style="width: 100%; margin-bottom: 20px" row-key="id" default-expand-all>
@@ -93,12 +89,6 @@ const add = () => {
           </template>
         </el-table-column>
         <el-table-column prop="createTime" label="修改时间" />
-        <el-table-column label="操作">
-          <template #default="scope">
-            <el-button type="text" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-            <el-button type="text" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-          </template>
-        </el-table-column>
       </el-table>
     </Card>
     <addUserPop v-model:dialogFormVisible="dialogFormVisible" v-model:editData="editData" @childList="getList"></addUserPop>

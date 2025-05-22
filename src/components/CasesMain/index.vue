@@ -21,6 +21,8 @@ const instance = getCurrentInstance();
 const tableData = ref<Menu[]>([]);
 const router = useRouter();
 const getList = (list: any) => {
+  console.log(2);
+
   getMenu(list).then(res => {
     tableData.value = res.data;
   });
@@ -70,7 +72,7 @@ const getTotalNum = (asideArray: any) => {
         <div class="dhy_case-component">
           <div class="dhy_case-card" v-for="(item2, el) in item1.children" :key="el" @click="jumpClick(item2)">
             <!-- <img :src="getAssetsFile(item2.coverUrl)" class="image" /> -->
-            <el-image :src="item2.coverUrl" class="image" />
+            <el-image loading="lazy" :src="item2.coverUrl" class="image" />
             <p class="dhy_card-label">{{ item2.cataName }}</p>
           </div>
         </div>

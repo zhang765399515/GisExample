@@ -1,4 +1,4 @@
-import { GeoElevationLayer } from "geokey-gis";
+import { GeoElevationLayer, Cartesian3 } from "geokey-gis";
 
 export function loadElevationLayer() {
   let elevationLayer = new GeoElevationLayer({
@@ -6,7 +6,18 @@ export function loadElevationLayer() {
     id: 'dem'
   });
 
-  console.log(elevationLayer);
-
   window.viewer.map.ground.layer.add(elevationLayer);
+  window.viewer.camera.flyTo({
+    "destination": {
+      "x": -2409472.7439568853,
+      "y": 5381073.087562549,
+      "z": 2430591.768481925
+    },
+    "orientation": {
+      "heading": 0.00024044460713312787,
+      "pitch": -0.9462604118108913,
+      "roll": 0.00001898255343579791
+    },
+    "duration": 1
+  })
 }

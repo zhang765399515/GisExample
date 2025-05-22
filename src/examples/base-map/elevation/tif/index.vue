@@ -8,7 +8,7 @@ import { loadElevationLayer } from './map'
 onMounted(() => {
     setTimeout(() => {
         loadElevationLayer()
-    }, 4000)
+    }, 2000)
 })
 </script>
 

@@ -76,7 +76,6 @@ const cancel =() =>{
         <el-button v-else type="danger" plain>禁止</el-button>
       </el-descriptions-item>
     </el-descriptions>
-    <el-button type="primary" plain class="reset-btn" @click="reset">重置密码</el-button>
     <el-dialog v-model="dialogFormVisible" title="重置密码" width="500" @close="cancel">
       <el-form ref="personalRef" :rules="rules" :model="form">
           <el-form-item label="旧密码：" prop="oldPassword" :label-width="formLabelWidth">

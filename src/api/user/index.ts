@@ -1,4 +1,5 @@
 import service from '@/utils/axios'
+import getMenuJson from './getMenu.json'
 // 菜单管理
 // 新增目录
 export function addMenu(data:any) {
@@ -10,11 +11,12 @@ export function addMenu(data:any) {
 }
 // 获取目录
 export function getMenu(data:any) {
-    return service({
-        url: "/case/cata/getLists",
-        method: "post",
-        params:data,
-    });
+    // return service({
+    //     url: "/case/cata/getLists",
+    //     method: "post",
+    //     params:data,
+    // });
+    return Promise.resolve(getMenuJson)
 }
 // 修改目录
 export function modifyMenu(data:any) {
