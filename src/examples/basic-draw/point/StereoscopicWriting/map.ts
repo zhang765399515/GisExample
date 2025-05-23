@@ -86,9 +86,18 @@ export function load(val: { centerPoint: any; height: any; text?: string | undef
 }
 export function flyTo(lon: number, lat: number) {
   window.viewer.camera.flyTo({
-    destination: Cartesian3.fromDegrees(lon, lat, 8000),
-    duration: 0.5
-  });
+    "destination": {
+        "x": -2400624.1577497097,
+        "y": 5389086.253393388,
+        "z": 2430948.49626544
+    },
+    "orientation": {
+        "heading": 0.012249382878030346,
+        "pitch": -0.8007330189151056,
+        "roll": 0.000018031430027320994
+    },
+    "duration": 1
+});
 }
 export function drawText(
   text = '默认文字',

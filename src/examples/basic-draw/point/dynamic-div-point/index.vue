@@ -409,7 +409,9 @@ const infoTextData: any[] = reactive([
     },
 ])
 
-
+setTimeout(() => {
+    createVnodeFun()
+}, 2000);
 const createVnodeFun = () => {
     const node = document.getElementsByClassName('geokey-widget')[0];
     for (let i = 0; i < infoTextData.length; i++) {

@@ -16,8 +16,18 @@ export function addColumn() {
   const origin = Cartesian3.fromDegrees(118.9, 29, 400);
   const modelMatrix = Transforms.eastNorthUpToFixedFrame(origin);
   window.viewer.camera.flyTo({
-    destination: origin,
-  })
+    "destination": {
+        "x": -2700853.658006753,
+        "y": 4893085.29457537,
+        "z": 3072102.097222426
+    },
+    "orientation": {
+        "heading": 6.214095193247067,
+        "pitch": -0.7348156969912432,
+        "roll": 0.00017107319113218722
+    },
+    "duration": 1
+})
   window.viewer.scene.requestRenderMode = false; // 开启实时刷新
   // 自定义顶点着色器和片源着色器
   let appearance = new MaterialAppearance({

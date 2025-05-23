@@ -2,7 +2,9 @@
 import {
     loadStereoscopicWall,
 } from './map';
-
+setTimeout(() => {
+    loadStereoscopicWall()
+},2000)
 </script>
 
 <template>

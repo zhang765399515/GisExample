@@ -6,7 +6,7 @@ const rangeFun = () => {
     load()
 }
 const guiConfig = ref({
-    cloudCover: 0.6, //云覆盖度
+    cloudCover: 0.5, //云覆盖度
     windSpeedRatio: 0.0002,//风速
     fogColor: 3.0,
     length: 5000.0,
@@ -20,6 +20,9 @@ const guiConfig = ref({
 const change = () => {
     cloudChange(guiConfig.value)
 }
+setTimeout(() => {
+    rangeFun();
+},2000)
 const aaa=ref(0)
 </script>
 

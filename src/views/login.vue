@@ -19,7 +19,7 @@ interface LoginForm {
 }
 const loginForm = reactive<LoginForm>({
   username: 'admin',
-  password: '',
+  password: 'Gis2023!',
   grant_type: "password",
   client_id: "powergisId",
   client_secret: "powergisSecret",

@@ -408,7 +408,9 @@ const infoTextData: any[] = reactive([
         name: '深圳湾体育中心'
     },
 ])
-
+setTimeout(() => {
+    createVnodeFun()
+}, 2000);
 
 const createVnodeFun = () => {
     const node = document.getElementsByClassName('geokey-widget')[0];

@@ -29,7 +29,17 @@ export async function load() {
     })
   });
   window.viewer.scene.primitives.add(primitiveData); //添加到场景中
-  window.viewer.goTo({
-    center: [114.0359, 22.803471, 500000],
-  });
+  window.viewer.camera.flyTo({
+    "destination": {
+        "x": -2478532.055499997,
+        "y": 5536834.609611671,
+        "z": 2508230.326329093
+    },
+    "orientation": {
+        "heading": 6.283185307179586,
+        "pitch": -1.5707940862627217,
+        "roll": 0
+    },
+    "duration": 1
+});
 }

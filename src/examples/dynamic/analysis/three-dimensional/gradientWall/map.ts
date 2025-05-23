@@ -15,7 +15,17 @@ export function createDynamicShadeWallGraphics(options) {
 
     if (options && options.positions) {
         window.viewer.camera.flyTo({
-          destination:Cartesian3.fromDegrees(113.928684, 22.555127,5000)
+          "destination": {
+              "x": -2393424.5295229442,
+              "y": 5389131.390549494,
+              "z": 2428211.251238909
+          },
+          "orientation": {
+              "heading": 5.4437785697502346,
+              "pitch": -0.456361774659237,
+              "roll": 0.000058801080728976274
+          },
+          "duration": 1
       })
 
       var alp = options.alp || 1,

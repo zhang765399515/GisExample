@@ -23,6 +23,9 @@ const loadPoint = () => {
   });
   flyTo(potion.lon, potion.lat);
 };
+setTimeout(() => {
+  loadPoint() 
+},2000)
 </script>
 
 <template>

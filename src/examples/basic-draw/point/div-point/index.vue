@@ -423,6 +423,9 @@ const createVnodeFun = () => {
     //     render(item, node);
     // })
 }
+setTimeout(() => {
+    createVnodeFun()
+}, 2000);
 const removeDivFun = () =>{
     removeDiv();
 }

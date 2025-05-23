@@ -9,19 +9,21 @@ import {
   Ellipsoid,
   GeokeyTerrainProvider
 } from 'geokey-gis';
-export function loadTer() {
-  let provider = new GeokeyTerrainProvider({
-    url: 'http://14.22.86.227:12022/service/gis/3DModel/?serviceName=sz_dem'
+export async function loadTer() {
+  const elevationLayer = await GeokeyTerrainProvider.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/?serviceName=sz_dem', {
+    requestVertexNormals: true,
+    requestWaterMask: true
   });
-  window.viewer.terrainProvider = provider;
+
+  window.viewer.terrainProvider = elevationLayer;
 }
 export function load(val: { centerPoint: any; text?: string | undefined; fontSize?: number | undefined; style: any; }) {
-  let {centerPoint,text = '默认文字',fontSize = 16,style} = val;
+  let { centerPoint, text = '默认文字', fontSize = 16, style } = val;
   if (typeof text != 'string') {
     console.log('文字必须是string类型');
     return;
   }
-  console.log(centerPoint,val)
+  console.log(centerPoint, val)
   if (!(centerPoint && centerPoint.longitude && centerPoint.longitude)) {
     console.log('经纬度数据异常');
     return;
@@ -85,8 +87,17 @@ export function load(val: { centerPoint: any; text?: string | undefined; fontSiz
 }
 export function flyTo(lon: number, lat: number) {
   window.viewer.camera.flyTo({
-    destination: Cartesian3.fromDegrees(lon, lat, 3000),
-    duration: 0.5
+    "destination": {
+      "x": -2398227.01692151,
+      "y": 5384523.024579099,
+      "z": 2432113.8422221723
+    },
+    "orientation": {
+      "heading": 0.2714760899387212,
+      "pitch": -0.44730397908575537,
+      "roll": 0.000018074157919656386
+    },
+    "duration": 1
   });
 }
 export function drawText(

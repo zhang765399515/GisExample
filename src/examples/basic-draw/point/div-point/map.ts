@@ -42,9 +42,8 @@ export class DivLabel {
     if (!this._vnode.el || !this._vnode.el.style) return;
 
     const canvasHeight = window.viewer.scene.canvas.height;
-    const windowPosition = new Cartesian2();
 
-    SceneTransforms.wgs84ToWindowCoordinates(window.viewer.scene, this.position, windowPosition);
+    const windowPosition = SceneTransforms.worldToWindowCoordinates(window.viewer.scene, this.position);
 
     this._vnode.el.style.bottom = canvasHeight - windowPosition.y + this.height + 'px';
     const elWidth = this._vnode.el.offsetWidth;

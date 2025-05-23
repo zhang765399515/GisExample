@@ -12,7 +12,17 @@ import {
 export function createConeCylinder(options){
   if (options && options.position) {
     window.viewer.camera.flyTo({
-      destination:Cartesian3.fromDegrees(options.position.lng,options.position.lat,5000)
+      "destination": {
+          "x": -2393516.801854312,
+          "y": 5386381.258090659,
+          "z": 2429612.736655257
+      },
+      "orientation": {
+          "heading": 0.022936639534928638,
+          "pitch": -0.8128745033016198,
+          "roll": 0.000008284799254631992
+      },
+      "duration": 1
   })
     var cylinderEntity = new Entity(),
     alp = options.alp || 1,

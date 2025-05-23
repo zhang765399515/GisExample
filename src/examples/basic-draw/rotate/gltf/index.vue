@@ -20,6 +20,19 @@ onMounted(() =>{
             maxHeight: 20,
             speed: 0.2,
         })
+        window.viewer.camera.flyTo({
+    "destination": {
+        "x": -2393479.6132583045,
+        "y": 5386059.643131391,
+        "z": 2429800.107612168
+    },
+    "orientation": {
+        "heading": 5.12841546697246,
+        "pitch": -0.7746269803861789,
+        "roll": 6.283142894674741
+    },
+    "duration": 1
+});
 
     },1000)
 }) 

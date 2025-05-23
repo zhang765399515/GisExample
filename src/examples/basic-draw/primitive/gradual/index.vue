@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { loadRegions } from './map'
-
+setTimeout(() => {
+    loadRegions()
+}, 1000)
 </script>
 
 <template>

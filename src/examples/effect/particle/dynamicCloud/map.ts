@@ -3,7 +3,7 @@ let postProcessStage: any;
 export function load() {
   let position = Cartesian3.fromDegrees(114.144444, 22.661265, 2000.7689009180795);
   let guiConfig = {
-    cloudCover: 0.6, //云覆盖度
+    cloudCover: 0.5, //云覆盖度
     windSpeedRatio: 0.0002, //风速
     fogColor: 3.0,
     length: 5000.0,
@@ -30,9 +30,19 @@ export function load() {
       }
     })
   );
-  window.viewer.camera.setView({
-    destination: Cartesian3.fromDegrees(114.144444, 22.66126, 10000.0)
-  });
+  window.viewer.camera.flyTo({
+    "destination": {
+        "x": -2420883.797853747,
+        "y": 5376772.047256108,
+        "z": 2448208.612405846
+    },
+    "orientation": {
+        "heading": 4.3916696448628585,
+        "pitch": -0.7101012061908021,
+        "roll": 0.0003268050330671457
+    },
+    "duration": 1
+})
 }
 interface CloudData {
   cloudCover: number; // 云覆盖度

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { addColumn } from './map'
-
+setTimeout(() => {
+addColumn()
+},2000)
 </script>
 
 <template>

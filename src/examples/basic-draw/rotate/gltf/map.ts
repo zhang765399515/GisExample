@@ -11,9 +11,6 @@ import {
 } from "geokey-gis";
 export function createModel(options){
   if (options && options.position) {
-    window.viewer.camera.flyTo({
-      destination:Cartesian3.fromDegrees(options.position.lng,options.position.lat,5000)
-  })
     var entity = new Entity();
     entity.model = new ModelGraphics({
       uri:options.url,
