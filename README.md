@@ -14,7 +14,7 @@ npm install
 # geokey-gis
 npm install git+http://git.igeokey.com/dhy/geokey-gis.git
 
-# vite-plugin-geokey-gis GeokeyGIS + VITE 项目构建插件
+# vite-plugin-geokey-gis GisDemo + VITE 项目构建插件
 npm install git+http://git.igeokey.com/dhy/vite-plugin-geokey-gis.git
 
 # 启动服务
@@ -24,7 +24,7 @@ npm run dev
 # 前端访问地址 http://localhost:8080
 
 ## 技术栈
-vue3 + vite + GeokeyGIS
+vue3 + vite + GisDemo
 
 node版本建议使用18+
 ```

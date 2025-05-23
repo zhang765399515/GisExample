@@ -8,7 +8,7 @@ import store from '@/store';
 import { useRouter } from "vue-router";
 const router = useRouter()
 
-const title: string = "GeoKeyGIS";
+const title: string = "GisDemo";
 
 interface LoginForm {
   username: string

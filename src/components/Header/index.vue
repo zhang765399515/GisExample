@@ -46,7 +46,7 @@ const goView = (path: any) => {
 <template>
   <div class="dhy_header">
     <div class="dhy_title">
-      <img src="/image/application/geokeygis_logo.png" alt="logo">
+      <!-- <img src="/image/application/geokeygis_logo.png" alt="logo"> -->
       <div v-if="!isShowSource && router.currentRoute.value.path !== '/system'" class="dhy_search">
         <el-input v-model="cataName" @input="funSearch" placeholder="请输入搜索内容" :prefix-icon="Search"
           clearable></el-input>
