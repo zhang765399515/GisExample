@@ -52,7 +52,7 @@ const goView = (path: any) => {
           clearable></el-input>
       </div>
     </div>
-    <!-- <div class="dhy_user">
+    <div class="dhy_user">
       <span>hello! {{ name }}{{ userName }}</span>
       <el-dropdown>
         <el-image style="width: 100px; height: 100px"
@@ -70,6 +70,6 @@ const goView = (path: any) => {
       <div v-if="isShowSource" class="dhy_head-menu">
         <span class="dhy_open-codeEdit" @click="openCodeEditor">查看源代码</span>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
