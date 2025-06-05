@@ -3,8 +3,21 @@ import menu from './menu.json';
 
 let tile: any = {}; //用于保存模型以便下面使用
 export function load3dtiles() {
+  window.viewer.camera.setView({
+    "destination": {
+        "x": -2446768.5243018377,
+        "y": 5365053.3985792035,
+        "z": 2436284.3583372943
+    },
+    "orientation": {
+        "heading": 6.0083014787569855,
+        "pitch": -0.6502774418755348,
+        "roll": 0.00021944127938766655
+    },
+    "duration": 1
+});
   window.viewer.surfacePierce.enable = true;
-  window.viewer.surfacePierce.alpha = 0.1
+  window.viewer.surfacePierce.alpha = 1
 
   let TraversalFunc = (modelVal: any[]) => {
     modelVal.forEach(e => {
@@ -17,17 +30,15 @@ export function load3dtiles() {
   };
   TraversalFunc(menu);
 }
-export function loadB3dm(data: { jsonUrl: any }) {
+export async function loadB3dm(data: { jsonUrl: any }) {
+  let tileset = await Geokey3DTileset.fromUrl(data.jsonUrl);
   tile = window.viewer.scene.primitives.add(
-    new Geokey3DTileset({
-      url: data.jsonUrl
-    })
+    tileset
   );
   tile.layerName = 'explode';
-  window.viewer.scene.primitives.add(tile);
-  tile.readyPromise.then((res: any) => {
-    window.viewer.zoomTo(res);
-  });
+  // window.viewer.zoomTo(tile);
+  // tile.readyPromise.then((res: any) => {
+  // });
 }
 export function spacingChange(val: any) {
   let _primitives: Object[] = [];

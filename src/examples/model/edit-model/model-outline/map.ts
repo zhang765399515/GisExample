@@ -5,13 +5,11 @@ import {
     defined,
     ScreenSpaceEventType
 } from "geokey-gis"
-export function load3dtiles(){
-    const tileset = window.viewer.scene.primitives.add(new Geokey3DTileset({
-        url: 'http://14.22.86.227:12022/service/gis/3DModel/shenzhen_jianzhu/tileset.json?serviceName=sz_baimo',
-    }))
-    tileset.readyPromise.then(tile =>{
+export async function load3dtiles(){
+    let model = await Geokey3DTileset.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/hsl/tileset.json?serviceName=hsl_B3dm')
+    // const model = await Geokey3DTileset.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/shenzhen_jianzhu/tileset.json?serviceName=sz_baimo')
+    const tileset = window.viewer.scene.primitives.add(model)
         window.viewer.zoomTo(tileset)
-    })
 }
 export function modelOutLine(){
     load3dtiles()

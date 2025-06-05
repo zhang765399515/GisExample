@@ -62,7 +62,7 @@ export async function addTileset() {
   tileset = await new Geokey3DTileset({
     url: 'http://14.22.86.227:12022/service/gis/3DModel/Scene/Production_2.json?uuid=633463e9-97e2-47e1-86f6-85edb862c4cd&serviceName=sz_hsl_b3dm20231109',
     maximumScreenSpaceError: 1
-  }).readyPromise;
+  });
   window.viewer.scene.primitives.add(tileset);
 
   window.viewer.zoomTo(tileset);

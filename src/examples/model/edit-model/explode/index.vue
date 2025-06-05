@@ -5,6 +5,9 @@ import { load3dtiles,spacingChange,spacingCancel } from "./map";
 setTimeout(() => {
   load3dtiles();
 }, 1000);
+setTimeout(() => {
+    spacingChange(100)
+}, 3000);
 const spacing = ref(0);
 const cancel = () => {
     spacingCancel(spacing.value);

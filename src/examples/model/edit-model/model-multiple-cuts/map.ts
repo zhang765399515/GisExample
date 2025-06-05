@@ -1,33 +1,32 @@
 import { Geokey3DTileset, Cartesian3, ClippingPolygonCollection, ClippingPolygon } from 'geokey-gis';
+let tileset:any;
 export async function load3dtiles() {
   try {
-    const tileset = await Geokey3DTileset.fromUrl('http://192.168.1.20:10252/geokey/gis/3DModel/?layers=cs_3dtile');
-    window.viewer.scene.primitives.add(tileset);
-    window.viewer.camera.setView({
-        destination: {
-            "x": -2390169.773322854,
-            "y": 5390543.976358631,
-            "z": 2423753.4506166517
-        },
-        orientation: {
-            heading: 5.868283238640601,
-            pitch: -0.9181128692768992,
-            roll:  6.283158779993642,
-        },
-    });
+    tileset = await Geokey3DTileset.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/hsl/tileset.json?serviceName=hsl_B3dm')
+        window.viewer.scene.primitives.add(tileset);
+        window.viewer.zoomTo(tileset)
     // const positions = footprint.polygon.hierarchy.getValue().positions;
-    const lonLatArray: number[][] = [
-      [113.91016182815036, 22.48277953408739, 113.91046684491097, 22.48269541424013, 113.91019651859527, 22.482191735897867],
-      [113.91204404829611, 22.484270157737317,113.91157439417248, 22.484448754087204, 113.91232621785049, 22.484735677625103]
-    ];
+    
     // 将裁剪多边形集合添加到全局瓦片集
-    tileset.clippingPolygons = getClippingPolygons({
-      lonLatArray,
-      inverse: true
-    });
+    
   } catch (error) {
     console.error(`tileset 创建失败: ${error}`);
   }
+}
+export function clopModel(){
+  console.log(1)
+  const lonLatArray: number[][] = [
+    [114.491824, 22.683658, 114.492176, 22.649978,114.494141, 22.6438885897867]
+  ];
+  tileset.clippingPolygons = getClippingPolygons({
+    lonLatArray,
+    inverse: true
+  });
+  console.log('name：tileset.clippingPolygons',tileset.clippingPolygons);
+}
+export function cancelModel(){
+  tileset.clippingPolygons.enabled = false;
+
 }
 interface ClippingPolygonsOptions {
   lonLatArray: number[][]; // 经纬度数组，每个元素是 [lon, lat]
