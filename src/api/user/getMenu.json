@@ -1085,7 +1085,20 @@
                             "isVisible": 1,
                             "children": null
                         },
-                        
+                        {
+                            "id": 639,
+                            "cataName": "无人机漫游",
+                            "cataUrl": "base-map/basic/wurenji-roaming",
+                            "parentId": 630,
+                            "coverUrl": "http://gis.igeokey.com:12025/moxing/xy-img/surround-roaming.gif",
+                            "path": "/widgets-Fly-roundCenter",
+                            "levelCode": "100011009",
+                            "level": 3,
+                            "sort": 1,
+                            "isSub": 0,
+                            "isVisible": 1,
+                            "children": null
+                        },
                         {
                             "id": 641,
                             "cataName": "地下漫游（有）",

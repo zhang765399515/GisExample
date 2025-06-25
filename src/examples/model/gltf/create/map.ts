@@ -22,7 +22,7 @@ export function loadModelGraphics() {
     model: {
       // uri: 'http://14.22.86.227:12022/service/gis/3DModel/?serviceName=mx_yhd_bp6&uuid=1',
       // uri: 'http://14.22.86.227:12022/service/gis/3DModel/?serviceName=mx_yhd_dmtx5&uuid=1',
-      uri: 'http://14.22.86.227:12022/service/gis/3DModel/?serviceName=luse_1&uuid=1',
+      uri: 'src/assets/model/无人机.glb',
       runAnimations: true,
       scale: 10,
       minimumPixelSize: 128,
