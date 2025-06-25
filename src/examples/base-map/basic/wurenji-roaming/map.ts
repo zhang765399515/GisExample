@@ -172,6 +172,7 @@ export class roamCollision {
       },
       show: false
     });
+    this.startFly()
     console.log(1)
   }
   processData(data) {
@@ -188,24 +189,30 @@ export class roamCollision {
     // 结束时间
     this.stopTime = JulianDate.addSeconds(this.startTime, 360, new JulianDate());
     // 设置时钟开始时间
-    if(window.viewer && window.viewer.clock){
-        window.viewer.clock.startTime = this.startTime.clone();
-        // 设置始终停止时间
-        window.viewer.clock.stopTime = this.stopTime.clone();
-        // 设置时钟当前时间
-        window.viewer.clock.currentTime = this.startTime.clone();
-        //循环执行,即为2，到达终止时间，重新从起点时间开始
-        window.viewer.clock.clockRange = ClockRange.CLAMPED;
+    if (window.viewer && window.viewer.clock) {
+      window.viewer.clock.startTime = this.startTime.clone();
+      // 设置始终停止时间
+      window.viewer.clock.stopTime = this.stopTime.clone();
+      // 设置时钟当前时间
+      window.viewer.clock.currentTime = this.startTime.clone();
+      //循环执行,即为2，到达终止时间，重新从起点时间开始
+      window.viewer.clock.clockRange = ClockRange.CLAMPED;
     }
 
     //按照时间进行位置取样，返回一个位置取样的属性
     let property = new SampledPositionProperty();
     for (let j = 0; j < positions.length; j++) {
-        let time = JulianDate.addSeconds(this.startTime, j * 60, new JulianDate());
-        let position = positions[j];
-        property.addSample(time, position);
+      let time = JulianDate.addSeconds(this.startTime, j * 60, new JulianDate());
+      let position = positions[j];
+      property.addSample(time, position);
     }
-    console.log('name：property',property);
+    console.log('name：property', property);
     return property;
-}
+  }
+  startFly(speed) {
+    console.log('name：speed',speed);
+    window.viewer.clock.multiplier = 10;
+    window.viewer.clock.shouldAnimate = true;
+    // window.viewer.scene.globe.show=false;
+  }
 }
