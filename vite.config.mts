@@ -95,6 +95,11 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           pathRewrite: { '^/file': '' }
         },
+        '/qxsy': {
+          target: `https://dzhj.szdhjczx.com`,
+          changeOrigin: true,
+          pathRewrite: { '^/qxsy': '' }
+        },
       }
     },
     optimizeDeps: {

@@ -1,10 +1,15 @@
-import { JulianDate, Cartesian3, CMath, ClockStep, ClockRange, Geokey3DTileset, ScreenSpaceEventHandler, ScreenSpaceEventType, Cartographic, Ray, PolylineDashMaterialProperty, Color, SampledPositionProperty, VelocityOrientationProperty, TimeIntervalCollection, TimeInterval } from "geokey-gis";
-
+import { SceneTransforms, JulianDate, Cartesian3, CMath, ClockStep, ClockRange, Geokey3DTileset, ScreenSpaceEventHandler, ScreenSpaceEventType, Cartographic, Ray, PolylineDashMaterialProperty, Color, SampledPositionProperty, VelocityOrientationProperty, TimeIntervalCollection, TimeInterval, Matrix4, Matrix3, Cartesian2, defined, Geokey3DTileFeature } from "geokey-gis";
+import { along, length, lineString } from "@turf/turf";
+import { first } from "lodash";
 let exection: () => void;
-
+let tileset;
 export async function loadTilesLayer() {
+  if (tileset) {
+    tileset.show=true;
+    return
+  }
   try {
-    const tileset = await Geokey3DTileset.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/?serviceName=xms_3dtile', {
+    tileset = await Geokey3DTileset.fromUrl('http://14.22.86.227:12022/service/gis/3DModel/Scene/Production_2.json?uuid=633463e9-97e2-47e1-86f6-85edb862c4cd&serviceName=sz_hsl_b3dm20231109', {
       maximumScreenSpaceError: 2,
       lightColor: new Cartesian3(10, 10, 10)
     });
@@ -14,11 +19,13 @@ export async function loadTilesLayer() {
     console.log("加载3DTile失败");
   }
 }
-
+export function removeTilesLayer() {
+  tileset.show=false
+}
 export async function startToRoaming() {
   const options: any = {
-    lng: 114.3223291616,
-    lat: 22.6045831633,
+    lng: 114.49634,
+    lat: 22.652898,
     height: 0,
     heading: 0.0,
     pitch: 0.0,
@@ -82,6 +89,8 @@ export class roamCollision {
   line: any;
   startTime;
   stopTime;
+  roamEntity;
+  listener;
   constructor() {
     this.points = [];
   }
@@ -93,20 +102,108 @@ export class roamCollision {
       var cartesian = window.viewer.scene.pickPosition(evt.position);
       //分析经纬度数据
       let point = this.getCatesian3To84(cartesian);
-      console.log('name：point', point);
       this.points.push(point)
       callback(point)
     }, ScreenSpaceEventType.LEFT_CLICK);
   }
-  analyzeCollision(val) {
+  analyzeCollision(val, callback) {
 
     let TwoPoint = this.getRayByTwoPoint(
       Cartesian3.fromDegrees(val[0].longitude, val[0].latitude, val[0].height),
       Cartesian3.fromDegrees(val[1].longitude, val[1].latitude, val[1].height)
     );
 
+    let drillingData = window.viewer.scene.drillPickFromRay(TwoPoint, Number.MAX_VALUE, [], 0.1);
+    this.loadCollisionLine(drillingData);
+
+
+    // const collisions = this.checkObliquePhotographyCollision(Cartesian3.fromDegrees(val[0].longitude, val[0].latitude, val[0].height), Cartesian3.fromDegrees(val[1].longitude, val[1].latitude, val[1].height));
+    // console.log('name：collisions', collisions);
+
+    let points = [];
+    val.forEach(e => {
+      points.push([e.longitude, e.latitude])
+
+    })
+    const line = lineString(points);
+    const pointCount = 50; // 采样点数量
+    const sampledPoints = [];
+    for (let i = 0; i <= pointCount; i++) {
+      // 使用turf.along在路径上按比例获取点
+      const distance = length(line) * (i / pointCount);
+      const point = along(line, distance, { units: 'kilometers' });
+      sampledPoints.push(point.geometry.coordinates);
+    }
+    let lonLatHeight = [];
+    sampledPoints.forEach(e => {
+      lonLatHeight.push(this.getPointHeight(e));
+    })
+    callback(lonLatHeight)
+  }
+  checkObliquePhotographyCollision(pointA, pointB) {
+    // 创建从点A到点B的射线
+    const direction = Cartesian3.subtract(pointB, pointA, new Cartesian3());
+    const ray = new Ray(pointA, Cartesian3.normalize(direction, direction));
+
+    // 计算两点之间的距离
+    const maxDistance = Cartesian3.distance(pointA, pointB);
+
+    // 存储所有碰撞结果
+    const results = [];
+
+    // 遍历场景中的所有3D Tileset（倾斜摄影模型）
+    viewer.scene.primitives._primitives.forEach(primitive => {
+      // 对每个3D Tileset进行射线检测
+      let pickResult = {};
+      const pickResult1 = primitive.pick(ray, pickResult);
+
+      console.log('name：pickResult', pickResult, pickResult);
+      if (pickResult1) {
+        // 计算交点到起点的距离
+        const intersectionDistance = Cartesian3.distance(
+          pointA,
+          pickResult.position
+        );
+
+        // 检查交点是否在两点之间的线段上
+        results.push({
+          position: pickResult.position,
+          tileset: primitive,
+          distance: intersectionDistance,
+          feature: pickResult.feature // 被击中的具体要素
+        });
+      }
+    });
+
+    console.log('name：results', results);
+    // 按距离排序（近→远）
+    results.sort((a, b) => a.distance - b.distance);
+
+    return results;
+  }
+  loadCollisionLine(val) {
+    console.log('name：val', val);
+    val.forEach((e, i) => {
+      window.viewer.entities.add({
+        position: e.position,
+        point: {
+          color: Color.fromCssColorString(`rgba(255,${i},${i},1)`),
+          pixelSize: 15,
+        }
+      })
+    });
+  }
+  getPointHeight(val) {
+    let TwoPoint = this.getRayByTwoPoint(
+      Cartesian3.fromDegrees(val[0], val[1], 1000),
+      Cartesian3.fromDegrees(val[0], val[1], - 1000)
+    );
     let drillingData = this.drillPickFromRay(TwoPoint, Number.MAX_VALUE, [], 0.1);
-    console.log('name：drillingData', drillingData);
+    if (drillingData[0]) {
+      let firstPoint = this.getCatesian3To84(drillingData[0].position);
+      return firstPoint
+    }
+    return {}
   }
   getCatesian3To84(cartesian) {
     var cartographicPosition = Cartographic.fromCartesian(cartesian);
@@ -139,7 +236,7 @@ export class roamCollision {
         dashLength: 0,//虚线长度
       }),
       disableDepthTestDistance: 50000000,
-      width: 5,
+      width: 2,
       clampToGround: true
     };
     this.line = window.viewer.entities.add({
@@ -159,7 +256,8 @@ export class roamCollision {
       lineString.push([e.longitude, e.latitude, e.height2 - e.height]);
     });
     let positionProperty_1 = this.computePath(positions);
-    window.viewer.entities.add({
+    this.roamEntity = window.viewer.entities.add({
+
       position: positionProperty_1,
       orientation: new VelocityOrientationProperty(positionProperty_1), // 根据所提供的速度计算模型的朝向
       availability: new TimeIntervalCollection([new TimeInterval({ // 和时间轴关联
@@ -169,11 +267,11 @@ export class roamCollision {
       model: {
         uri: 'src/assets/model/无人机.glb',
         scale: 0.01
-      },
-      show: false
+      }
     });
+    window.viewer.trackedEntity = this.roamEntity;
     this.startFly()
-    console.log(1)
+    // this.lookAtTransform();
   }
   processData(data) {
     const coordinates = [];
@@ -209,10 +307,36 @@ export class roamCollision {
     console.log('name：property', property);
     return property;
   }
-  startFly(speed) {
-    console.log('name：speed',speed);
-    window.viewer.clock.multiplier = 10;
+  startFly() {
+    window.viewer.clock.multiplier = 1;
     window.viewer.clock.shouldAnimate = true;
     // window.viewer.scene.globe.show=false;
+  }
+  lookAtTransform() {
+    this.listener = e => {
+      if (window.viewer.clock.shouldAnimate === true) {
+        let ori = this.roamEntity.orientation.getValue(window.viewer.clock.currentTime); //获取偏向角
+        console.log('name：ori', ori);
+        let center = this.roamEntity.position.getValue(window.viewer.clock.currentTime); //获取位置
+        if (ori != undefined) {
+          let transform = Matrix4.fromRotationTranslation(Matrix3.fromQuaternion(ori), center); //将偏向角转为3*3矩阵，利用实时点位转为4*4矩阵
+          if (ori && center) {
+            window.viewer.camera.lookAtTransform(transform, new Cartesian3(-5, 0, 3.2));
+          } else {
+            window.viewer.camera.lookAtTransform(Matrix4.IDENTITY); // 或设置一个默认的视角
+          }
+          window.viewer.camera.lookAtTransform(transform, new Cartesian3(-5, 0, 3.2)); //将相机向后面放一点
+
+        } else {
+          // 重启鹰眼图关联
+          window.viewer.clock.shouldAnimate = false;
+
+          window.viewer.clock.onTick.removeEventListener(this.listener);
+          this.listener = undefined;
+        }
+      }
+    }
+    window.viewer.clock.onTick.addEventListener(this.listener);
+
   }
 }
