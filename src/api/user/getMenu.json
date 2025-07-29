@@ -1929,6 +1929,20 @@
                             "isSub": 0,
                             "isVisible": 1,
                             "children": null
+                        },
+                        {
+                            "id": 778,
+                            "cataName": "管网",
+                            "cataUrl": "model/edit-model/guanwang",
+                            "parentId": 688,
+                            "coverUrl": "http://gis.igeokey.com:12025/moxing/xy-img/upload/d20fcaab-e824-4180-a5d4-5cb364bca124/Snipaste_2025-01-10_17-07-36.png",
+                            "path": "vague",
+                            "levelCode": "100016001",
+                            "level": 3,
+                            "sort": 1,
+                            "isSub": 0,
+                            "isVisible": 1,
+                            "children": null
                         }
                     ]
                 },

@@ -1211,6 +1211,13 @@
             "thumbnail": "basemap.png",
             "name": "批量添加（GLTF）模型",
             "path": "/bacthGltf"
+          },
+          {
+            "id": "model/edit-model/guanwang",
+            "title": "管网路线",
+            "thumbnail": "basemap.png",
+            "name": "管网路线",
+            "path": "/guanwang"
           }
         ]
       },
